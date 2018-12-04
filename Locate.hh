@@ -1,6 +1,6 @@
 
-#ifndef LOCALE
-#define LOCALE
+#ifndef LOCATE
+#define LOCATE
 
 #include <iostream>
 #include <string>
@@ -10,6 +10,8 @@ private:
 	const int _serial;
 	int _x;
 	int _y;
+	Locate *_tete;
+
 
 public:
 	Locate(int x,int y, int serial);
@@ -19,7 +21,9 @@ public:
 	void removeCom();
 	Locate *getCom();
 
-	void ping();
+	const void ping();
 	void locateSquad();
 
 };
+
+#endif
