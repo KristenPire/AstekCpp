@@ -32,7 +32,7 @@ int main(){
 	std::cout << "Remaining charge : " << charge << std::endl;
 
 	if(Z6PO==C3PO)
-		std::cout << Z6PO.getSerial() << " and " << C3PO.getSerial() << " are same! Why name is changed" << std::endl;
+		std::cout << "Z6PO serial : " << Z6PO.getSerial() << " and " << "C3PO serial : " << C3PO.getSerial() << " are same! Why name is changed" << std::endl;
 
 	if(R2D2!=R4P19)
 		std::cout << R2D2.getSerial() << " and " << R4P19.getSerial() << " are different. But R2-D2 is the best one" << std::endl;
