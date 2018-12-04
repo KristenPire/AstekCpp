@@ -2,8 +2,6 @@
 #define LOCALE_HH
 
 
-
-
 class Locate
 {
 public:
@@ -19,8 +17,8 @@ public:
 
 private:
 	const int _serial;
-	int _x, _y;
-
+	int _x, _y, _members=0;
+	Locate *_next;
 };
 
 
