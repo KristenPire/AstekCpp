@@ -17,7 +17,7 @@ public:
 
 private:
 	const int _serial;
-	int _x, _y, _members=0;
+	int _x, _y;
 	Locate *_next;
 };
 

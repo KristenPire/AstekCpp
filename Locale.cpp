@@ -7,44 +7,35 @@ Locate::Locate(int x, int y, int serial):_serial(serial)
 {
 	_x = x;
 	_y = y;
-
+	_next = NULL;
 	std::cout<<"Locate "<<_serial<<" initialised"<<std::endl;
 }
 
 void Locate::addCom(int x, int y, int serial)
 {
+	Locate *tmp = new Locate(x, y, serial);
 	if (this->_next==NULL)
-	{
-		Locate *tmp = new Locate(x, y, serial);
 		this->_next = tmp;
-	}
 	else
 	{
-		Locate *tmp = new Locate(x, y, serial);
 		tmp->_next = this->_next;
 		this->_next = tmp;
 	}
-	this->_members++;
 }
 
 
 Locate *Locate::getCom()
 {
-	if (this->_next == NULL)
-	{
-		return NULL;
-	}
-	else
-	{
-		return this->_next;
-	}
+	return this->_next;
 }
 
 void Locate::removeCom()
 {
-	std::cout<<"Locate "<<this->_serial<<" shutting down"<<std::endl;
-	this->_next = NULL;
-	this->_members--;
+	Locate *tmp = this->_next;
+	
+	this->_next = tmp->_next;
+
+	delete tmp;
 }
 
 void Locate::ping()
@@ -57,19 +48,17 @@ void Locate::locateSquad()
 {
 	Locate *next;
 	next = this->_next;
-	int i = this->_members;
-	while(i>0)
+	while(next!=NULL)
 	{
 		next->ping();
 		next = next->_next;
-		i--;
 	}
 	this->ping();
 }
 
 Locate::~Locate()
 {
-	//delete tmp;
+	std::cout<<"Locate "<<this->_serial<<" shutting down"<<std::endl;
 }
 
 
