@@ -18,11 +18,11 @@ public:
 	void set_status(std::string *new_status);
 	void set_id(std::string new_ID);
 
-	std::size_t get_attack();
-	std::size_t get_toughness();
-	std::string get_serial();
-	std::string *get_status();
-	std::string get_energy();
+	std::size_t get_attack() const;
+	std::size_t get_toughness() const;
+	std::string get_serial() const;
+	std::string get_status() const;
+	std::size_t get_energy() const;
 
 
 private:

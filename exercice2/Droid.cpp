@@ -92,27 +92,27 @@ void Droid::set_id(std::string new_ID)
 	this->_ID = new_ID;
 }
 
-std::size_t Droid::get_attack()
+std::size_t Droid::get_attack()const
 {
 	return this->_Attack;
 }
 
-std::size_t Droid::get_toughness()
+std::size_t Droid::get_toughness() const
 {
 	return this->_Toughness;
 }
 
-std::string Droid::get_serial()
+std::string Droid::get_serial() const
 {
 	return this->_ID;
 }
 
-std::string *Droid::get_status()
+std::string Droid::get_status() const
 {
-	return this->_Status;
+	return *(*this)._Status;
 }
 
-std::string Droid::get_energy()
+std::size_t Droid::get_energy() const
 {
 	return this->_Energy;
 }
@@ -130,7 +130,7 @@ int main()
 	d=d1;
 	
 	d.set_status(new std::string("KILL KILL KILL !"));
-	std::cout<<"-----------"<<std::endl;
+	
 	d<<Durasel;
 	
 	std::cout<<d<<"--"<<Durasel<<std::endl;
