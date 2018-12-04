@@ -9,6 +9,9 @@ public:
 	Droid(std::string &name="");
 	Droid(const Droid&);
 	~Droid();
+	Droid operator=(const Droid&);
+	bool operator==(const Droid&) const;
+	bool operator!=(const Droid&) const;
 
 	void set_energy(std::size_t new_energy);
 	void set_status(std::string *new_status);
