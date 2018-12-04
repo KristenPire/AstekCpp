@@ -16,7 +16,8 @@ Droid::Droid(const Droid& A):_serial(A._serial),_Energy(A._Energy),_Attack(A._At
 }
 
 
-Droid::~Droid(){
+Droid::~Droid(){ 
+	delete _Status; // Nepa oublier
 	std::cout << "Droid " << _serial << " Destroyed" << std::endl;
 }
 
@@ -59,7 +60,6 @@ void Droid::setID(std::string Id){
 
 void Droid::setStatus(std::string *Status){
 	*_Status = *Status;
-
 }
 
 void Droid::setEnergy(size_t Energy){
@@ -78,12 +78,7 @@ void Droid::operator=(const Droid& A){
 
 bool Droid::operator==(const Droid& A){
 
-	if(_serial == A._serial && _Energy == A._Energy && _Attack==A._Attack && _Toughness == A._Toughness && *_Status == *(A._Status))
-	{
-		return true;
-	}
-
-	return false;
+	return (_serial == A._serial && _Energy == A._Energy && _Attack==A._Attack && _Toughness == A._Toughness && *_Status == *(A._Status));
 }
 
 bool Droid::operator!=(const Droid& A){
@@ -101,10 +96,11 @@ void Droid::operator<<(size_t &Energy){
 	if((_Energy + Energy) <= 100)
 	{
 		_Energy += Energy;
+		Energy = 0;
 		return;
 	}
 	else{
-		Energy -=_Energy ;
+		Energy -= (100-_Energy) ;
 		_Energy = 100;
 	}
 
@@ -113,11 +109,7 @@ void Droid::operator<<(size_t &Energy){
 
 std::ostream& operator<<(std::ostream& a,const Droid& D){
 
-	std::string serial = D.getSerial();
-	size_t Energy = D.getEnergy();
-	std::string Status = D.getStatus();
-
-	a << "Droid '" << serial << " , " << Status << " , " << Energy;
+	a << "Droid '" << D.getSerial()<< " , " << D.getStatus() << " , " << D.getEnergy();
 
 	return a;
 }
