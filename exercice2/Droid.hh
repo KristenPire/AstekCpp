@@ -6,14 +6,21 @@
 class Droid
 {
 public:
-	Droid(const std::string &name="");
+	Droid(std::string &name="");
 	Droid(const Droid&);
 	~Droid();
 
-	void status();
+	void set_energy(std::size_t new_energy);
+	void set_status(std::string *new_status);
+
+	const std::size_t get_attack();
+	const std::size_t get_toughness();
+	std::string get_serial();
+	std::string *get_status();
+
 
 private:
-	const std::string _ID;
+	std::string _ID;
 	std::size_t _Energy;
 	const std::size_t _Attack, _Toughness;
 	std::string *_Status
