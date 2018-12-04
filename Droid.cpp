@@ -5,7 +5,7 @@
 
 Droid::Droid(std::string serial=""):energy(50), attack(25), toughness(15)
 {
-	*status ="Standing by";
+	status =new std::string("Standing by");
 	id=serial;
 };
 
@@ -24,9 +24,18 @@ Droid Droid :: operator= ( const Droid & droid){
 	return *this;
 }
 
+bool Droid::operator==(const Droid & droid){
+	if((this->energy==droid.energy)&&(this->attack==droid.attack)&&(this->toughness==droid.id)&&(this->id==droid.id)&&(this->&status==drois.&status)){
+		return true;
+	}else{
+		return false;
+	}
+};
+
 
 Droid::~Droid(){
-
+	std::cout<<"Destruction"<<std::endl;
+	delete status;
 };
 
 
@@ -48,8 +57,8 @@ size_t Droid::getToughness(){
 	return toughness;
 };
 
-std::string* Droid::getStatus(){
-	return status;
+std::string Droid::getStatus(){
+	return *status;
 };
 
 void Droid::setId(std::string newId){

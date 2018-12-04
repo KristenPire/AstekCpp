@@ -4,7 +4,7 @@
 class Droid{
 public:
 	Droid(std::string serial);
-	Droid (const Droid& );
+	Droid (const Droid& droid);
 	Droid operator= ( const Droid & droid);
 	~Droid();
 
@@ -12,11 +12,13 @@ public:
 	size_t getEnergy();
 	size_t getAttack();
 	size_t getToughness();
-	std::string* getStatus();
+	std::string getStatus();
 
 	void setId(std::string newId);
 	void setEnergy(size_t newEnergy);
 	void setStatus(std::string* newStatus);
+
+	bool operator==(const Droid & droid);
 
 
 private:
