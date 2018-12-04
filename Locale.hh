@@ -8,8 +8,8 @@
 class Locate{
 private:
 	const int _serial;
-	int x;
-	int y;
+	int _x;
+	int _y;
 
 public:
 	Locate(int x,int y, int serial);
