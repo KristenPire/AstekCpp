@@ -1,58 +1,64 @@
 #include "Droid.hh"
 
-Droid::Droid(int serial,size_t Energy, size_t Attack, size_t Toughness, std::string Status):_serial(serial),_Energy(Energy),_Attack(Attack),_Toughness(Toughness)
+Droid::Droid(std::string serial,size_t Energy, size_t Attack, size_t Toughness, std::string Status):_serial(serial),_Energy(Energy),_Attack(Attack),_Toughness(Toughness)
 {
 	_Status = new std::string;
 	*_Status = Status;
+
+	std::cout << "Droid " << _serial << "Activated" << std::endl;
 }
 
-Droid::Droid(const Droid& A){
-
-	_serial = A._serial;
-	_Energy = A._Energy;
-	_Attack = A._Attack;
-	_Toughness = A._Toughness;
-	_Status = *A._Status;
-
+Droid::Droid(const Droid& A):_serial(A._serial),_Energy(A._Energy),_Attack(A._Attack),_Toughness(A._Toughness){
+	
+	_Status = new std::string;
+	*_Status = *A._Status;
+	std::cout << "Droid " << _serial << "Activated , Memory Dumped" << std::endl;
 }
 
 
 Droid::~Droid(){
+	std::cout << "Droid " << _serial << " Destroyed" << std::endl;
 }
 
 
-const std::string Droid::getId(){
+std::string Droid::getId() const{
 
 	return _serial;
 
 }
 
-const int Droid::getSerial(){
+std::string Droid::getSerial() const{
 	return _serial;
 
 }
 
-const size_t Droid::getEnergy(){
+size_t Droid::getEnergy() const{
 	return _Energy;
 
 }
 
-const size_t Droid::getAttack(){
+size_t Droid::getAttack() const{
 
 	return _Attack;
 }
 
-const size_t Droid::getToughness(){
+size_t Droid::getToughness() const {
 
 	return _Toughness;
 }
 
-const std::string Droid::getStatus(){
+std::string Droid::getStatus() const{
 	return *_Status;
 }
 
-void Droid::setStatus(std::string Status){
-	*_Status = Status;
+void Droid::setID(std::string Id){
+	_serial = Id;
+
+}
+
+
+void Droid::setStatus(std::string *Status){
+	*_Status = *Status;
 
 }
 
@@ -61,6 +67,14 @@ void Droid::setEnergy(size_t Energy){
 	_Energy = Energy;
 
 }
+
+void Droid::operator=(const Droid& A){
+
+	_serial = A._serial;
+	_Energy = A._Energy;
+	*_Status = *A._Status; 
+}
+
 
 bool Droid::operator==(const Droid& A){
 
@@ -82,20 +96,28 @@ bool Droid::operator!=(const Droid& A){
 		return false;
 }
 
-void Droid::operator<<(size_t Energy){
+void Droid::operator<<(size_t &Energy){
 
-	if((_Energy + Energy) >= 0 && (_Energy + Energy) <= 100)
+	if((_Energy + Energy) <= 100)
 	{
 		_Energy += Energy;
 		return;
+	}
+	else{
+		Energy -=_Energy ;
+		_Energy = 100;
 	}
 
 	return;
 }
 
-std::ostream& Droid::operator<<(std::ostream& a){
+std::ostream& operator<<(std::ostream& a,const Droid& D){
 
-	a << "Droid '" << _serial << " , " << _Status << " , " << _Energy;
+	std::string serial = D.getSerial();
+	size_t Energy = D.getEnergy();
+	std::string Status = D.getStatus();
+
+	a << "Droid '" << serial << " , " << Status << " , " << Energy;
 
 	return a;
 }
