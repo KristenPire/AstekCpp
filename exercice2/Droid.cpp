@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-Droid::Droid(const std::string serial) : _Attack(25), _Toughness(15)
+Droid::Droid(std::string serial) : _Attack(25), _Toughness(15)
 {
 	_ID = serial;
 	_Energy = 50;
