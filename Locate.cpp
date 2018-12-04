@@ -30,7 +30,7 @@ Locate* Locate::getCom(){
 	return _next;
 }
 
-void Locate::ping(){
+void Locate::ping() const{
 	std::cout << "Locate " << _serial << " currently at " << _x << " " << _y << std::endl;
 }
 

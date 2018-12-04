@@ -12,7 +12,7 @@ class Locate{
 		void removeCom();
 		Locate* getCom();
 
-		void ping();
+		void ping() const;
 		void locateSquad();
 
 	private:
