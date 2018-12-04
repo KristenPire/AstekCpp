@@ -10,7 +10,6 @@ Locate::Locate(int x,int y, int serial):_serial(serial),_x(x),_y(y){
 
 Locate::~Locate(){
 
-	delete _tete;
 	std::cout << "Locate " << _serial << " shutting down" << std::endl;
 }
 
@@ -54,6 +53,7 @@ void Locate::removeCom(){
 	safe = _tete->_tete;
 	delete _tete;
 	_tete = safe;
+
 }
 
 Locate *Locate::getCom(){
