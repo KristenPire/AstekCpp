@@ -14,6 +14,16 @@ Droid::Droid(const Droid& droid):energy(50), attack(25), toughness(15){
 	id=droid.id;
 }
 
+Droid Droid :: operator= ( const Droid & droid){
+	energy=droid.energy;
+// attack et toughtness sont uniquement en lecture on ne peux pas les affecter	
+//	attack=droid.attack;
+//	toughness=droid.toughness;
+	*status=*(droid.status);
+	id=droid.id;
+	return *this;
+}
+
 
 Droid::~Droid(){
 

@@ -5,6 +5,7 @@ class Droid{
 public:
 	Droid(std::string serial);
 	Droid (const Droid& );
+	Droid operator= ( const Droid & droid);
 	~Droid();
 
 	std::string getId();
