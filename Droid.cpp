@@ -93,9 +93,9 @@ void Droid::operator<<(size_t Energy){
 	return;
 }
 
-ostream& Droid::operator<<(ostream& a, Droid& D){
+std::ostream& Droid::operator<<(std::ostream& a){
 
-	a << "Droid '" << D._serial << " , " << D._Status << " , " << D._Energy;
+	a << "Droid '" << _serial << " , " << _Status << " , " << _Energy;
 
 	return a;
 }

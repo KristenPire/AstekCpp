@@ -29,7 +29,7 @@ public:
 	bool operator==(const Droid& A);
 	bool operator!=(const Droid& A);
 	void operator<<(size_t E);
-	ostream& operator<<(ostream& a, Droid& D);
+	std::ostream& operator<<(std::ostream& a, Droid& D);
 
 };
 
