@@ -32,28 +32,7 @@ const void Locate::ping(){
 	std::cout << "Locate " << this->serial << " currently at " << x << " " << y << std::endl;
 }
 
-const void Locate::locateSquad(){
-	//~ Locate *l = this->linked_locate;
-	//~ std::cout << "Checking " << this->serial << std::endl;
-	//~ if(l){ //Should be false if pointer is null
-		//~ std::cout << "Moving on" << std::endl;
-		//~ l->locateSquad();
-	//~ }
-	//~ std::cout << "Display "<< this->serial << std::endl;
-	//~ this->ping();
-	
-	//~ bool is_origin = true;
-	//~ Locate *l = this->linked_locate;
-	//~ if(l){
-		//~ l->ping();
-	//~ }
-	//~ else{
-		
-	//~ }
-	//~ l-> locateSquad();
-	
-	//~ this->ping();
-	
+const void Locate::locateSquad(){	
 	Locate * tmp;
 	tmp = this->linked_locate;
 	while(tmp !=NULL){
