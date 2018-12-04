@@ -5,6 +5,13 @@ Droid::Droid(std::string serial=""): Id(serial), Energy(50), Attack(25), Toughne
 	std::cout << "Droid \'"  << this->Id << " \' Activated" <<  std::endl;
 }
 
+Droid::Droid(const Droid d): Id(d.Id), Energy(d.Energy), Attack(d.Attack), Toughness(d.Toughness), Status(d.Status)
+{
+	std::cout << "Droid \'"  << this->Id << " \' Activated" <<  std::endl;
+}
+
+
+
 Droid::~Droid(){
 	std::cout << "Droid \'"  << this->Id << " \' Destroyed" <<  std::endl;
 }

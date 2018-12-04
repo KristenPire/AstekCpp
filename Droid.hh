@@ -11,6 +11,7 @@ class Droid {
 		
 	public:
 		Droid(std::string serial);
+		Droid(const Droid d);
 		~Droid();
 		std::string getId();
 		size_t getEnergy();
