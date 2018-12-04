@@ -1,3 +1,10 @@
+
+#ifndef LOCALE
+#define LOCALE
+
+#include <iostream>
+#include <string>
+
 class Locate{
 private:
 	const int _serial;
