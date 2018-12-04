@@ -19,12 +19,12 @@ class Droid{
 
 		void setFeature(std::string serial);
 		void setFeature(size_t energy);
-		void setFeature(std::string status);
+		void setFeature(std::string* status);
 
 		bool operator==(Droid const &droid) const;
 		void operator=(Droid const &droid);
 		bool operator!=(Droid const &droid) const;
-		void operator<<(size_t energy);
+		void operator<<(size_t& energy);
 
 	private:
 		std::string _serial;
