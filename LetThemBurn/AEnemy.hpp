@@ -5,16 +5,16 @@
 
 class AEnemy
 {
-private:
+protected:
 	int _hp;
 	std::string _type;
 
 public:
 	AEnemy(int hp, const std::string &type);
 	~AEnemy();
-	virtual void takeDamage(int damage);
+	virtual void takeDamage(int damage)=0;
 	const std::string getType() const;
-	int getHP() const;
+	const int getHP() const;
 	
 };
 

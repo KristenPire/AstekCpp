@@ -1,19 +1,14 @@
 #include "PowerFist.hpp"
 
 
-PowerFist::PowerFist(const std::string &name,int apcost, int damage){
+PowerFist::PowerFist(const std::string &name = "Power Fist",int apcost = 8, int damage = 50): AWeapon(name,apcost,damage){
 
 
 }
 
-PowerFist::~PowerFist(){
+
+void PowerFist::attack() const{
 
 
 
-}
-
-virtual void PowerFist::attack() const{
-
-
-	
 }

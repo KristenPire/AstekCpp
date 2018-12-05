@@ -3,7 +3,7 @@
 
 
 
-AEnemy::AEnemy(int hp, const std::string &type){
+AEnemy::AEnemy(int hp, const std::string &type):_hp(hp),_type(type){
 
 
 
@@ -12,24 +12,29 @@ AEnemy::AEnemy(int hp, const std::string &type){
 
 AEnemy::~AEnemy(){
 
-
-
-}
-
-virtual void AEnemy::takeDamage(int damage){
-
-
+	std::cout << "Pzzz, pom" << std::endl;
 
 }
+
+/*
+void AEnemy::takeDamage(int damage){
+
+	if(damage > 0)
+	{
+		_hp = max(_hp-damage,0);
+
+	}
+
+}*/
 
 const std::string AEnemy::getType() const{
 
-
+	return _type;
 
 }
 
-int AEnemy::getHP() const{
+const int AEnemy::getHP() const{
 
+	return _hp;
 
-	
 }

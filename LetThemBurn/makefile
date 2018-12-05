@@ -1,15 +1,14 @@
 CC	= g++
 
-NAME	= bin
+NAME	= Fallout
 
 RM	= rm -f
 
 CFLAGS	+= -W -Wall -Wextra -Wfatal-errors
 
-SRC	=	main.cpp \
-		Peon.cpp \
-		Sorcerer.cpp \
-		Victim.cpp
+SRC	=	AEnemy.cpp \
+		PlasmaRifle.cpp \
+		PowerFist.cpp
 
 
 OBJS	= $(SRC:.cpp=.o) #

@@ -7,7 +7,7 @@ class PowerFist: public AWeapon
 {
 public:
 	PowerFist(const std::string &name,int apcost, int damage);
-	~PowerFist();
+	~PowerFist()=default;
 	virtual void attack() const;
 	
 };

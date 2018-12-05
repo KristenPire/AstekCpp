@@ -1,7 +1,8 @@
 #ifndef SUPERMUTANT
 #define SUPERMUTANT
+#include "AEnemy.hpp"
 
-class SuperMutant
+class SuperMutant:public AEnemy
 {
 
 
