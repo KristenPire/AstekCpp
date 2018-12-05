@@ -1,8 +1,8 @@
 #include "Peon.hpp"
 
-Peon::Peon(std::string name_): name(name_)
+Peon::Peon(std::string name_): Victim(name_)
 {
-	std::cout << "Zog zog." <<  std::endl;	
+	std::cout << "Zog zog." <<  std::endl;
 }
 
 Peon::~Peon(){
@@ -10,6 +10,6 @@ Peon::~Peon(){
 }
 
 
-virtual void Peon::getPolymorphed()const{
+void Peon::getPolymorphed()const{
 	std::cout << name  << " has been turned into a pink pony !" <<  std::endl;	
 }

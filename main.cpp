@@ -2,10 +2,15 @@
 
 
 int main(){
-	Sorcerer s("Jean", "Le testeur");
-	Victim v("Billy");
-	std::cout << s << std::endl;
-	std::cout << v << std::endl;
-	s.polymorph(v);
+	
+	Sorcerer robert("Robert", "the Magnificent");
+	Victim jim("Jimmy");
+	Peon joe("Joe");
+	
+	std::cout << robert << jim << joe;
+	
+	robert.polymorph(jim);
+	robert.polymorph(joe);
+	
 	return 0;
 }

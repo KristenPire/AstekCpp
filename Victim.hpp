@@ -3,12 +3,12 @@
 
 class Victim{
 	protected:
-		std::string name;
+		const std::string name;
 
 	public:
 		Victim(std::string name_);
 		~Victim();
-		friend std::ostream& operator<<(std::ostream& os, Victim& v);
+		std::string getName();
 		
 		virtual void getPolymorphed()const;
 };

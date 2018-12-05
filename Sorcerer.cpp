@@ -11,9 +11,18 @@ Sorcerer::~Sorcerer(){
 	std::cout << name  << " , " << title << " , is dead. Consequences will never be the same !" <<  std::endl;
 }
 
+std::string Sorcerer::getName(){
+	return name;
+}
+
+std::string Sorcerer::getTitle(){
+	return title;
+}
+
+
 std::ostream& operator<<(std::ostream& os, Sorcerer& s)  
 {  	
-    os << "I am " << s.name << " , " << s.title << " , and I like ponies !";  
+    os << "I am " << s.getName() << " , " << s.getTitle() << " , and I like ponies !" << std::endl;  
     return os;  
 } 
 

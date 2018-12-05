@@ -10,9 +10,13 @@ Victim::~Victim(){
 	std::cout << "Victim " << name  << " just died for no apparent reason !" <<  std::endl;	
 }
 
+std::string Victim::getName(){
+	return name;
+}
+
 std::ostream& operator<<(std::ostream& os, Victim& v)  
 {  	
-    os << "I'm " << v.name << " , and i like otters !";
+    os << "I'm " << v.getName() << " , and i like otters !"<< std::endl;
     return os;  
 } 
 

@@ -4,13 +4,14 @@
 
 class Sorcerer{
 	private:
-		std::string name;
-		std::string title;
+		const std::string name;
+		const std::string title;
 
 	public:
 		Sorcerer(std::string name_, std::string title_);
 		~Sorcerer();
-		friend std::ostream& operator<<(std::ostream& os, Sorcerer &s);
+		std::string getName();
+		std::string getTitle();
 		
 		void polymorph(const Victim &victim)const;
 };
