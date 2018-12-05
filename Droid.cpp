@@ -17,7 +17,7 @@ Droid::Droid(const Droid &d): Id(d.Id), Energy(d.Energy), Attack(d.Attack), Toug
 void Droid::operator=(const Droid &d){
 	this->Id = d.Id;
 	this->Energy = d.Energy;
-	//~ Attack=d.Attack;	Impossible, ce sont des static
+	//~ Attack=d.Attack;	Impossible, ce sont des const
 	//~ Toughness=d.Toughness;
 	std::string *ptr = d.Status;
 	this->Status = ptr;
@@ -64,39 +64,30 @@ void Droid::setStatus(std::string *ptr){
 
 //Comparison
 
-bool operator==(const Droid &d1, const Droid &d2){
-	if(d1.getId()== d2.getId() && d1.getEnergy()==d2.getEnergy() && d1.getAttack()==d2.getAttack() && d1.getToughness()==d2.getToughness() && d2.getStatus()==d2.getStatus()){
-		return true;
-	}
-	else{
-		return false;
-	}
+bool Droid::operator==(const Droid &d){
+	return(this->Id== d.getId() && this->Energy==d.getEnergy() && this->Attack==d.getAttack() && this->Toughness==d.getToughness() && *this->Status==d.getStatus());
 }
 
-bool operator!=(const Droid &d1, const Droid &d2){
-	if(d1.getId()== d2.getId() && d1.getEnergy()==d2.getEnergy() && d1.getAttack()==d2.getAttack() && d1.getToughness()==d2.getToughness() && d2.getStatus()==d2.getStatus()){
-		return false;
-	}
-	else{
-		return true;
-	}
+bool Droid::operator!=(const Droid &d){
+	return(!(this->Id== d.getId() && this->Energy==d.getEnergy() && this->Attack==d.getAttack() && this->Toughness==d.getToughness() && *this->Status==d.getStatus()));
 }
 
 
 
-Droid& operator<<(Droid &d, size_t &charge)  
+Droid& Droid::operator<<(size_t &charge)  
 {  
-    if (d.getEnergy()+charge <= 100){
-		d.setEnergy(d.getEnergy()+charge);
+    if (this->Energy+charge <= 100){
+		this->Energy=this->Energy+charge;
 		charge=0;
 	}
 	else{
-		charge=charge - (100-d.getEnergy());
-		d.setEnergy(100);
+		charge=charge - (100-this->Energy);
+		this->Energy=100;
 		
 	}
-    return d;
+	return *this;
 }  
+
 
 
 std::ostream& operator<<(std::ostream& os, const Droid& d)  
@@ -105,31 +96,5 @@ std::ostream& operator<<(std::ostream& os, const Droid& d)
     return os;  
 }  
 
-
-
-int main(){
-	Droid d;
-	//~ std::cout << d << std::endl;
-	//~ std::cout << "Je cree batterie" << std::endl;
-	//~ size_t batterie = 10;
-	//~ std::cout << "Je charge" << std::endl;
-	//~ d << 5 << 25 << batterie;
-	//~ std::cout << "J'ai charge" << std::endl;	
-	//~ std::cout << d << std::endl;
-	//~ std::cout << "Batterie :" << batterie << std::endl;
-	Droid d1("Avenger");
-	size_t Durasel = 200;
-	
-	std::cout << d << std::endl;
-	std::cout << d1 << std::endl;	
-	d = d1;
-	d.setStatus(new std::string("Kill Kill Kill!"));
-	d << Durasel;
-	std::cout << d << "--" << Durasel << std::endl;
-	Droid d2 = d;
-	d.setId("Rex");
-	std::cout << (d2 != d) << std::endl;
-	return 0;
-}
 
 

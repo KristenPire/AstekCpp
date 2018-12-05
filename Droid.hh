@@ -14,8 +14,8 @@ class Droid{
 		Droid(const Droid &d);
 		~Droid();
 		void operator=(const Droid &d);
-		friend bool operator==(const Droid &d1, const Droid &d2);
-		friend bool operator!=(const Droid &d1, const Droid &d2);
+		bool operator==(const Droid &d);
+		bool operator!=(const Droid &d);
 		
 		std::string getId() const;
 		size_t getEnergy() const;
@@ -27,6 +27,5 @@ class Droid{
 		void setEnergy(size_t);
 		void setStatus(std::string*);
 		
-		friend Droid& operator<<(Droid &d, size_t &charge);
-		friend std::ostream& operator<<(std::ostream& os, const Droid& d);
+		Droid& operator<<(size_t &charge);
 };
