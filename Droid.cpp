@@ -5,29 +5,22 @@ Droid::Droid(std::string serial=""): Id(serial), Energy(50), Attack(25), Toughne
 	Status = new std::string("Standing by");
 	std::cout << "Droid '"  << Id << "' Activated" <<  std::endl;	
 	
-	//~ std::cout << "Const Status " << Status << std::endl;
-	//~ std::cout << "Const Contenu de Status " << *Status << std::endl;
-	
 }
 
 Droid::Droid(const Droid &d): Id(d.Id), Energy(d.Energy), Attack(d.Attack), Toughness(d.Toughness)
 {
-	//~ std:: string str_status = *d.Status;
-	//~ std::string *ptr = &str_status;
-	//~ Status = ptr;
 	std::string *ptr = d.Status;
-	Status = ptr;
+	Status = ptr;	
 	std::cout << "Droid '"  << Id << "' Activated, memory Dumped" <<  std::endl;
 }
 
-Droid Droid::operator=(const Droid &d){
-	Id = d.Id;
-	Energy = d.Energy;
+void Droid::operator=(const Droid &d){
+	this->Id = d.Id;
+	this->Energy = d.Energy;
 	//~ Attack=d.Attack;	Impossible, ce sont des static
 	//~ Toughness=d.Toughness;
 	std::string *ptr = d.Status;
-	Status = ptr;
-	return *this;
+	this->Status = ptr;
 }
 
 Droid::~Droid(){
@@ -51,12 +44,6 @@ size_t Droid::getToughness() const{
 	return this->Toughness;
 }
 std::string Droid::getStatus() const{
-	//~ std::cout << "get Status " << this->Status << std::endl;
-	//~ std::string* ptr = this->Status;
-	//~ std::cout << "get ptr " << ptr << std::endl;
-	//~ std::string contenu = *ptr;
-	//~ std::cout << "get contenu " << contenu << std::endl;
-	//~ std::cout << "get Contenu de Status " << *ptr << std::endl;	
 	return *this->Status;
 }
 
@@ -97,7 +84,7 @@ bool operator!=(const Droid &d1, const Droid &d2){
 
 
 
-Droid& operator<<(Droid &d, size_t charge)  
+Droid& operator<<(Droid &d, size_t &charge)  
 {  
     if (d.getEnergy()+charge <= 100){
 		d.setEnergy(d.getEnergy()+charge);
@@ -113,12 +100,7 @@ Droid& operator<<(Droid &d, size_t charge)
 
 
 std::ostream& operator<<(std::ostream& os, const Droid& d)  
-{  
-	
-	//~ std::cout << "Ope Status " << d.getStatus() << std::endl;
-	//~ std::string* ptr = d.getStatus();
-	//~ std::cout << "Ope Contenu de Status " << *ptr << std::endl;	
-	
+{  	
     os << "Droid '" << d.getId() << "' , " << d.getStatus() << " , " << d.getEnergy();  
     return os;  
 }  
@@ -139,7 +121,7 @@ int main(){
 	size_t Durasel = 200;
 	
 	std::cout << d << std::endl;
-	std::cout << d1 << std::endl;
+	std::cout << d1 << std::endl;	
 	d = d1;
 	d.setStatus(new std::string("Kill Kill Kill!"));
 	d << Durasel;

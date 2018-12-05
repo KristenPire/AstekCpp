@@ -13,7 +13,7 @@ class Droid{
 		Droid(std::string serial);
 		Droid(const Droid &d);
 		~Droid();
-		Droid operator=(const Droid &d);
+		void operator=(const Droid &d);
 		friend bool operator==(const Droid &d1, const Droid &d2);
 		friend bool operator!=(const Droid &d1, const Droid &d2);
 		
@@ -27,6 +27,6 @@ class Droid{
 		void setEnergy(size_t);
 		void setStatus(std::string*);
 		
-		friend Droid& operator<<(Droid &d, size_t charge);
+		friend Droid& operator<<(Droid &d, size_t &charge);
 		friend std::ostream& operator<<(std::ostream& os, const Droid& d);
 };
