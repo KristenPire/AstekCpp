@@ -11,6 +11,8 @@ class Victim{
 
 		std::string getName() const;
 
+		void getPolymorphed() const;
+
 	private:
 		const std::string _name;
 };

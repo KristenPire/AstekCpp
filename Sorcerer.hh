@@ -1,9 +1,7 @@
 #ifndef SORCERER_HH
 #define SORCERER_HH
 
-#include <iostream>
-#include <fstream>
-#include <string>
+#include "Victim.hh"
 
 class Sorcerer{
 	public:
@@ -12,6 +10,8 @@ class Sorcerer{
 
 		std::string getName() const;
 		std::string getTitle() const;
+		
+		void polymorph(const Victim& victim);
 
 	private:
 		const std::string _name;

@@ -3,9 +3,13 @@
 
 int main(){
 	Sorcerer s;
-	std::cout << s << std::endl;
+	std::cout << s << std::endl << std::endl;
 
 	Victim v;
-	std::cout << v << std::endl;
+	std::cout << v << std::endl << std::endl;
+
+	s.polymorph(v);
+	std::cout << std::endl;
+
 	return 0;
 }
