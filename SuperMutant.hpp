@@ -6,6 +6,7 @@
 #include "AEnemy.hpp"
 
 class SuperMutant:public AEnemy{
+public:
 	SuperMutant();
 	virtual ~SuperMutant();
 	virtual void takeDamage(int damage);

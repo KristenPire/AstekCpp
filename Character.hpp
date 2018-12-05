@@ -14,11 +14,14 @@ public:
 	void attack (AEnemy *enemy);
 	void recoverAP();
 	const std::string & getName() const;
+    int getActionp() const;
+    AWeapon* getWeapon();
 private:
 	const std::string name;
 	int actionp;
 	AWeapon * weapon;
 };
 
+std::ostream & operator<<(std::ostream & stream,Character & character);
 
 #endif

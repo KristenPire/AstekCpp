@@ -1,6 +1,6 @@
 #include "PowerFist.hpp"
 
-PowerFist::PowerFist():AWeapon("Plasma Rifle",5,21){
+PowerFist::PowerFist():AWeapon("Power Fist",8,50){
 };
 
 PowerFist::~PowerFist(){

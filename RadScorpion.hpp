@@ -6,6 +6,7 @@
 #include "AEnemy.hpp"
 
 class RadScorpion:public AEnemy{
+public:
 	RadScorpion();
 	virtual ~RadScorpion();
 };
