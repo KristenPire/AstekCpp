@@ -1,3 +1,0 @@
-# AstekCpp
-
-Good luck guys
