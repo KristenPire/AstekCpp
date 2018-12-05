@@ -1,0 +1,21 @@
+#include "PlasmaRifle.hpp"
+#include "AWeapon.hpp"
+
+#include <iostream>
+#include <string>
+
+
+PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21)
+{
+
+}
+
+PlasmaRifle::~PlasmaRifle()
+{
+	std::cout<<this->_name<<" destroyed...";
+}
+
+void PlasmaRifle::attack()const
+{
+	std::cout<<"Piouuuu piouuuu piouuuu !"<<std::endl;
+}

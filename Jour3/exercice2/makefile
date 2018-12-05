@@ -1,0 +1,33 @@
+CC	= g++
+
+NAME	= Fallout
+
+RM	= rm -f
+
+CFLAGS	+= -W -Wall -Wextra
+
+SRC	=	AWeapon.cpp \
+		PlasmaRifle.cpp \
+		PowerFist.cpp \
+		AEnemy.cpp \
+		Character.cpp \
+		RadScorpion.cpp \
+		main.cpp
+
+
+OBJS	= $(SRC:.cpp=.o) #transforme tous les cpp en .o
+
+all: $(NAME)
+
+$(NAME): $(OBJS) 
+	 $(CC) $(OBJS) $(CFLAGS) -o $(NAME) #linkage
+
+clean:			#erase les objets
+	$(RM) $(OBJS) 		
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY:re clean fclean all
