@@ -9,6 +9,6 @@ PowerFist::PowerFist(const std::string &name = "Power Fist",int apcost = 8, int 
 
 void PowerFist::attack() const{
 
-
+	std::cout << "*pschh.. SBAM!*" << std::endl;
 
 }

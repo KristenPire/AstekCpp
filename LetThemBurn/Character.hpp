@@ -20,7 +20,13 @@ public:
 	void equip(AWeapon *weapon);
 	void attack(AEnemy *enemy);
 	const std::string& getName() const;
+	const AWeapon* getWeapon() const;
+	const int getAP() const;
 	
 };
+
+
+std::ostream& operator<<(std::ostream& a,const Character& C);
+
 
 #endif

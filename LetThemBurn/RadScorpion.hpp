@@ -7,7 +7,7 @@ class RadScorpion: public AEnemy
 {
 public:
 	RadScorpion(int hp = 80, const std::string &type = "RadScorpion");
-	~RadScorpion()=default;
+	~RadScorpion();
 	virtual void takeDamage(int damage);
 	
 };

@@ -4,6 +4,14 @@
 
 RadScorpion::RadScorpion(int hp, const std::string &type):AEnemy(hp,type){
 
+	std::cout << " click click click "<< std::endl;
+}
+
+
+RadScorpion::~RadScorpion(){
+
+
+	std::cout << " SPROTCH " << std::endl;
 
 }
 
