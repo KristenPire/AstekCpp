@@ -1,24 +1,26 @@
 #ifndef VICTIM_HPP
 #define VICTIM_HPP
 
-#include<string>
+#include <string>
+#include <ostream>
 
 class Victim
 {
-private:
+protected:
 	std::string _name;
 
 public:
 	Victim(const std::string &name);
 	~Victim();
 
-	std::string get_name()const;
+	const std::string &get_name()const;
 
-	void getPolymorphed()const;
+	virtual void getPolymorphed()const;
 };
 
 
-std::ostream &operator<<(std::ostream &out, Victim&);
+std::ostream &operator<<(std::ostream &out, const Victim& victim);
+
 
 
 #endif

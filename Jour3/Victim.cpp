@@ -14,17 +14,17 @@ Victim::~Victim()
 	std::cout<<"Victim "<<this->_name<<" just died for no apparent reason !"<<std::endl;
 }
 
-std::string Victim::get_name()const
+const std::string &Victim::get_name()const
 {
 	return this->_name;
-}
-
-std::ostream &operator<<(std::ostream out, Victim& victim)
-{
-	return out<<"I am "<<victim.get_name()<<" and I like otters !";
 }
 
 void Victim::getPolymorphed()const
 {
 	std::cout<<this->get_name()<<" has been turned into a cute little sheep !"<<std::endl;
+}
+
+std::ostream &operator<<(std::ostream &out, const Victim& victim)
+{
+	return out<<"I am "<<victim.get_name()<<" and I like otters !"<<std::endl;
 }

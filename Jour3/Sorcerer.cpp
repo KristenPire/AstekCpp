@@ -5,11 +5,7 @@
 #include <string>
 
 
-std::ostream &operator<<(std::ostream &out, Sorcerer& mage)
-{
-	return out<<"I am "<<mage.get_name()<<", "<<mage.get_title()<<", and I like ponies !";
 
-}
 
 Sorcerer::Sorcerer(const std::string &name, const std::string &title)
 {
@@ -23,12 +19,12 @@ Sorcerer::~Sorcerer()
 	std::cout<<this->_name<<", "<<this->_title<<", is dead. Consequences will never be the same !"<<std::endl;
 }
 
-std::string Sorcerer::get_name()
+const std::string &Sorcerer::get_name()const
 {
 	return this->_name;
 }
 
-std::string Sorcerer::get_title()
+const std::string &Sorcerer::get_title()const
 {
 	return this->_title;
 }
@@ -36,4 +32,11 @@ std::string Sorcerer::get_title()
 void Sorcerer::polymorph(const Victim &victim)const
 {
 	victim.getPolymorphed();
+}
+
+
+std::ostream &operator<<(std::ostream &out, const Sorcerer& mage)
+{
+	return out<<"I am "<<mage.get_name()<<", "<<mage.get_title()<<", and I like ponies !"<<std::endl;
+
 }
