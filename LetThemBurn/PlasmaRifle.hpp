@@ -6,7 +6,7 @@ class PlasmaRifle: public AWeapon
 {
 public:
 	PlasmaRifle(const std::string &name,int apcost, int damage);
-	~PlasmaRifle();
+	~PlasmaRifle()=default;
 	virtual void attack() const;
 };
 
