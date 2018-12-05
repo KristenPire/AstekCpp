@@ -7,11 +7,11 @@ public:
 	Droid (const Droid& droid);
 	~Droid();
 
-	std::string getId();
-	size_t getEnergy();
-	size_t getAttack();
-	size_t getToughness();
-	std::string getStatus();
+	std::string getId() const;
+	size_t getEnergy()const;
+	size_t getAttack()const;
+	size_t getToughness()const;
+	std::string getStatus()const;
 
 	void setId(std::string newId);
 	void setEnergy(size_t newEnergy);
@@ -21,7 +21,7 @@ public:
 	bool operator==(const Droid & droid);
 	bool operator!=(const Droid & droid);
     void operator<<(size_t  &newEnergy);
-    friend std::ostream& operator<< (std::ostream& objet ,const Droid &droid);
+    
 
 
 
@@ -36,3 +36,4 @@ private:
 
 };
 
+ std::ostream& operator<< (std::ostream& objet ,const Droid &droid);

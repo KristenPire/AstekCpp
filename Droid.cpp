@@ -62,7 +62,7 @@ void Droid::operator<<(size_t& newEnergy){
 
 
 std::ostream& operator<< (std::ostream& objet ,const Droid & droid){
-    objet<< " Droid ' "<< droid.id << " , "<< *(droid.status) <<" , "<<droid.energy;
+    objet<< " Droid ' "<< droid.getId()<< " , "<< droid.getStatus() <<" , "<<droid.getEnergy();
     return objet;
 };
 
@@ -75,23 +75,23 @@ Droid::~Droid(){
 
 // getter et setteur
 
-std::string Droid::getId(){
+std::string Droid::getId()const{
 	return id;
 };
 
-size_t Droid::getEnergy(){
+size_t Droid::getEnergy()const{
 	return energy;
 };
 
-size_t Droid::getAttack(){
+size_t Droid::getAttack()const{
 	return attack;
 };
 
-size_t Droid::getToughness(){
+size_t Droid::getToughness()const{
 	return toughness;
 };
 
-std::string Droid::getStatus(){
+std::string Droid::getStatus()const{
 	return *status;
 };
 
