@@ -6,4 +6,7 @@ class Peon : public Victim{
 		~Peon();
 		
 		virtual void getPolymorphed()const;
+		
+		private:
+		Peon(const Peon &) = delete;  //Dit au compilateur de ne pas créer le constructeur par réplication
 };
