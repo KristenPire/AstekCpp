@@ -1,5 +1,6 @@
 #ifndef SORCERER
 #define SORCERER 
+#include "Victim.hpp"
 
 #include <iostream>
 #include <string>
