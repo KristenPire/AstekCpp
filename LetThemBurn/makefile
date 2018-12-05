@@ -4,19 +4,25 @@ NAME	= Fallout
 
 RM	= rm -f
 
-CFLAGS	+= -W -Wall -Wextra -Wfatal-errors
+CFLAGS	+= -W -Wall -Wextra -Wfatal-errors 
+CXXFLAGS = -std=c++17
 
 SRC	=	AEnemy.cpp \
+		AWeapon.cpp \
 		PlasmaRifle.cpp \
-		PowerFist.cpp
-
+		PowerFist.cpp \
+		SuperMutant.cpp \
+		RadScorpion.cpp \
+		Character.cpp \
+		main.cpp
+		
 
 OBJS	= $(SRC:.cpp=.o) #
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	 $(CC) $(OBJS) $(CFLAGS) -o $(NAME)
+	 $(CC) $(OBJS) $(CFLAGS) -o $(NAME) $(CXXFLAGS)
 
 clean:
 	$(RM) $(OBJS)
