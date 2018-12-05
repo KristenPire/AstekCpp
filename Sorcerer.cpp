@@ -1,5 +1,4 @@
 #include "Sorcerer.hpp"
-#include "Victim.cpp"
 
 
 Sorcerer::Sorcerer(std::string name_, std::string title_): name(name_), title(title_)
@@ -19,10 +18,8 @@ std::ostream& operator<<(std::ostream& os, Sorcerer& s)
 } 
 
 
-int main(){
-	Sorcerer s("Jean", "Le testeur");
-	Victim v("Billy");
-	std::cout << s << std::endl;
-	std::cout << v << std::endl;
-	return 0;
+void Sorcerer::polymorph(const Victim &victim)const{
+	victim.getPolymorphed();
 }
+
+
