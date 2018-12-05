@@ -16,6 +16,7 @@ public:
 	~Sorcerer();
 	const std::string GetName() const;
 	const std::string GetTitle() const;
+	void polymorph(const Victim& V) const;
 };
 
 

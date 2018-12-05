@@ -23,6 +23,13 @@ const std::string Victim::GetName() const{
 	return _name;
 }
 
+void Victim::getPolymorphed() const{
+
+	std::cout << _name << " has been turned into a cute little sheep !" << std::endl;
+
+
+
+}
 
 std::ostream& operator<<(std::ostream& a, Victim& V){
 

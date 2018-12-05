@@ -8,10 +8,12 @@ class Victim
 
 private:
 	const std::string _name;
+
 public:
 	Victim(std::string name);
 	~Victim();
 	const std::string GetName() const;
+	void getPolymorphed() const;
 	
 };
 
