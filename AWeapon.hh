@@ -9,7 +9,7 @@ class AWeapon{
 		AWeapon(const std::string& name = "", int apcost = 0, int damage = 0);
 		virtual ~AWeapon();
 
-		std::string getName() const;
+		const std::string & getName() const;
 		int getAPCost() const;
 		int getDamage() const;
 		virtual void attack() const = 0;

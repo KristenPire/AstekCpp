@@ -1,5 +1,7 @@
 #include "PlasmaRifle.hh"
 #include "PowerFist.hh"
+#include "SuperMutant.hh"
+#include "RadScorpion.hh"
 
 int main(){
 	PowerFist pf;
@@ -7,6 +9,10 @@ int main(){
 
 	pr.attack();
 	pf.attack();
+
+
+	SuperMutant sm;
+	RadScorpion rs;
 
 	return 0;
 }
