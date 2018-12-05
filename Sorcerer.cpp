@@ -30,7 +30,7 @@ const std::string Sorcerer::GetTitle() const{
 }
 
 
-ostream& operator<<(ostream& a,Sorcerer& S ){
+std::ostream& operator<<(std::ostream& a,Sorcerer& S ){
 
 	a << "I am " << S.GetName() << " , " << S.GetTitle() << " and I like ponies!" << std::endl;
 

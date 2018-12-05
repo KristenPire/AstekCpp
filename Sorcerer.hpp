@@ -20,6 +20,6 @@ public:
 
 
 
-ostream& operator<<(ostream& a,Sorcerer& S);
+std::ostream& operator<<(std::ostream& a,Sorcerer& S);
 
 #endif
