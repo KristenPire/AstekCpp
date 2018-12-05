@@ -14,7 +14,12 @@ private:
 public:
 	Sorcerer(std::string name, std::string title);
 	~Sorcerer();
-	ostream& operator<<(ostream& a,Sorcerer& S);
+	const std::string GetName() const;
+	const std::string GetTitle() const;
 };
+
+
+
+ostream& operator<<(ostream& a,Sorcerer& S);
 
 #endif

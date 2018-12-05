@@ -16,10 +16,23 @@ Sorcerer::~Sorcerer(){
 
 }
 
+const std::string Sorcerer::GetName() const{
 
-ostream& Sorcerer::operator<<(ostream& a,Sorcerer& S ){
+	return _name;
 
-	a << "I am " << _name << " , " << _title << " and I like ponies!" << std::endl;
+
+}
+
+const std::string Sorcerer::GetTitle() const{
+
+
+	return _title;
+}
+
+
+ostream& operator<<(ostream& a,Sorcerer& S ){
+
+	a << "I am " << S.GetName() << " , " << S.GetTitle() << " and I like ponies!" << std::endl;
 
 	return a;
 }
