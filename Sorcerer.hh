@@ -13,9 +13,9 @@ class Sorcerer{
 		std::string getName() const;
 		std::string getTitle() const;
 
-	protected:
-		std::string _name;
-		std::string _title;
+	private:
+		const std::string _name;
+		const std::string _title;
 };
 
 std::ostream& operator<<(std::ostream& os, const Sorcerer& sorcerer);
