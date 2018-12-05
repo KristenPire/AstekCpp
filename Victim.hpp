@@ -13,7 +13,7 @@ public:
 	Victim(std::string name);
 	~Victim();
 	const std::string GetName() const;
-	void getPolymorphed() const;
+	virtual void getPolymorphed() const;
 	
 };
 

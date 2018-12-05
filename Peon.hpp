@@ -1,11 +1,13 @@
 #ifndef PEON
 #define PEON
+#include "Victim.hpp"
 
-class Peon
+class Peon:public Victim
 {
 public:
-	Peon();
+	Peon(std::string name);
 	~Peon();
+	virtual void getPolymorphed() const;
 	
 };
 
