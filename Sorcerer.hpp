@@ -7,6 +7,7 @@ class Sorcerer{
 		std::string title;
 
 	public:
-		Sorcerer(std::string name_, td::string title_);
+		Sorcerer(std::string name_, std::string title_);
 		~Sorcerer();
+		friend std::ostream& operator<<(std::ostream& os, Sorcerer &s);
 };
