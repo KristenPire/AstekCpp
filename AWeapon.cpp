@@ -3,7 +3,7 @@
 AWeapon::AWeapon(const std::string &name, int apcost, int damage): name_(name), apcost_(apcost), damage_(damage){}
 
 
-std::string AWeapon::getName() const{
+const std::string &AWeapon::getName() const{
 	return name_;
 }
 

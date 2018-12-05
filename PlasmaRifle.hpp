@@ -1,4 +1,9 @@
-#include "AWeapon.cpp"
+#include <iostream>
+#include <string>
+#ifndef AWEAPON_LD
+#define AWEAPON_LD
+#include "AWeapon.hpp"
+#endif
 
 class PlasmaRifle : public AWeapon{
 	private:
@@ -6,7 +11,7 @@ class PlasmaRifle : public AWeapon{
 	
 	public:
 		PlasmaRifle();
-		~PlasmaRifle() = default;
+		virtual ~PlasmaRifle() = default;
 		virtual void attack() const;
 	
 };
