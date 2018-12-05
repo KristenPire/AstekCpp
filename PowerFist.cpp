@@ -1,6 +1,6 @@
 #include "PowerFist.hh"
 
-PowerFist::PowerFist() : AWeapon("Power Fist", 21, 5){}
+PowerFist::PowerFist() : AWeapon("Power Fist", 8, 50){}
 PowerFist::~PowerFist(){}
 
 void PowerFist::attack() const{
