@@ -1,18 +1,26 @@
-#include "PlasmaRifle.hh"
-#include "PowerFist.hh"
-#include "SuperMutant.hh"
-#include "RadScorpion.hh"
+#include "Character.hh"
 
 int main(){
-	PowerFist pf;
-	PlasmaRifle pr;
+	const auto preda = new Character("Predator");
+	const auto prey = new RadScorpion();
 
-	pr.attack();
-	pf.attack();
+	std::cout << *preda;
 
+	AWeapon* pf(new PowerFist);
+	AWeapon* pr(new PlasmaRifle);
 
-	SuperMutant sm;
-	RadScorpion rs;
+	preda->equip(pr);
+
+	preda->attack(prey);
+	preda->equip(pf);
+	std::cout << *preda;
+	std::cout << prey->getHP() << std::endl;
+
+	std::cout << *preda;
+
+	delete preda;
+	delete prey;
+	delete pr;
 
 	return 0;
 }
