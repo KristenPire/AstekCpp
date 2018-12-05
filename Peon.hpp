@@ -1,6 +1,10 @@
+
+#ifndef PEON_HPP
+#define PEON_HPP
+
 #include <iostream>
 #include <string>
-#include "Victim.cpp"
+#include "Victim.hpp"
 
 
 class Peon : public Victim{
@@ -9,7 +13,6 @@ public:
 	~Peon();
 	virtual void getPolymorphed()const;
 
-private:
-
-
 };
+
+#endif

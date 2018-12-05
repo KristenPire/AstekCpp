@@ -1,6 +1,10 @@
+#ifndef SORCERER_HPP
+#define SORCERER_HPP
+
 #include <iostream>
 #include <string>
-#include "Peon.cpp"
+#include "Victim.hpp"
+
 
 class Sorcerer{
 public:
@@ -17,3 +21,5 @@ std::string title;
 };
 
 std::ostream& operator<<(std::ostream & stream, const Sorcerer & s);
+
+#endif

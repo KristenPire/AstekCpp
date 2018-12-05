@@ -1,3 +1,7 @@
+
+#ifndef VICTIM_HPP
+#define VICTIM_HPP
+
 #include <iostream>
 #include <string>
 
@@ -14,3 +18,5 @@ protected:
 };
 
 std::ostream& operator<<(std::ostream & stream, const Victim & v);
+
+#endif

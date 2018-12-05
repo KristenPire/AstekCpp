@@ -4,11 +4,11 @@ Sorcerer::Sorcerer(std::string name_, std::string title_){
 	name=name_;
 	title=title_;
 	std::cout<< name << " , "<< title <<" , is born !"<<std::endl;
-}
+};
 
 Sorcerer::~Sorcerer(){
 	std::cout<< name << " , "<< title <<" , is dead .Consequences will never be the same !"<<std::endl;
-}
+};
 
 std::string Sorcerer::getName()const{
 	return name;
