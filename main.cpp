@@ -38,5 +38,9 @@ int main(){
 	preda->attack(prey);
 	std::cout << *preda;
 	
+	delete preda;
+	delete pr;
+	delete pf;
+	
 	return 0;
 }
