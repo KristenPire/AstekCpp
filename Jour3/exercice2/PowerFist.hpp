@@ -8,7 +8,7 @@ class PowerFist
 {
 public:
 	PowerFist();
-	~PowerFist();
+	virtual ~PowerFist();
 	virtual void attack()const;
 
 

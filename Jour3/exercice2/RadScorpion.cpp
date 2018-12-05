@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-RadScorpion::RadScorpion(): AEnemy(170, "Super Mutant")
+RadScorpion::RadScorpion(): AEnemy(80, "RadScorpion")
 {
 	std::cout<<"*click click click*"<<std::endl;
 }

@@ -17,6 +17,6 @@ void SuperMutant::takeDamage(int damage)
 {
 	if (damage-3>0)
 	{
-		this->_HP=(damage-3);
+		_HP=(damage-3);
 	}
 }

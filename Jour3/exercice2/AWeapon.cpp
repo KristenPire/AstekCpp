@@ -16,15 +16,15 @@ AWeapon::~AWeapon()
 
 const std::string &AWeapon::getName()const
 {
-	return this->_name;
+	return _name;
 }
 int AWeapon::getAPCost()const
 {
-	return this->_AP;
+	return _AP;
 }
 
 int AWeapon::getDamage()const
 {
-	return this->_damage;
+	return _damage;
 }
 

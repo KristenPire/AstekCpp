@@ -11,23 +11,23 @@ AEnemy::AEnemy(int hp, const std::string &type) : _type(type)
 
 AEnemy::~AEnemy()
 {
-	std::cout<<this->_type<<" killed"<<std::endl;
+	std::cout<<_type<<" killed"<<std::endl;
 }
 
 void AEnemy::takeDamage(int damage)
 {
 	if(damage>0)
 	{
-		this->_HP-=damage;
+		_HP-=damage;
 	}
 }
 
 const std::string &AEnemy::getType()const
 {
-	return this->_type;
+	return _type;
 }
 
 int AEnemy::getHP() const
 {
-	return this->_HP;
+	return _HP;
 }
