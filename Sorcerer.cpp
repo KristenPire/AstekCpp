@@ -19,7 +19,7 @@ std::string Sorcerer::getTitle()const{
 };
 
 std::ostream& operator<<(std::ostream & stream, const Sorcerer & s){
-	stream<<"I am "<< s.getName() <<" , " <<s.getTitle()<< ", and I like ponies !";
+	stream<<"I am "<< s.getName() <<" , " <<s.getTitle()<< ", and I like ponies !"<<std::endl;
 	return stream;
 };
 

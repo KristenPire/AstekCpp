@@ -7,9 +7,9 @@ public:
 	Victim(std::string name);
 	~Victim();
 	std::string getName()const;
-	void getPolymorphed()const;
+	virtual void getPolymorphed()const;
 
-private:
+protected:
 	std::string name;
 };
 

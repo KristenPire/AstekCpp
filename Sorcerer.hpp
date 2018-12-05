@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Victim.cpp"
+#include "Peon.cpp"
 
 class Sorcerer{
 public:
