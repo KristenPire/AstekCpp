@@ -4,7 +4,7 @@
 
 
 
-	PlasmaRifle::PlasmaRifle(const std::string &name="Plasma Rifle",int apcost = 5, int damage=21):AWeapon(name,apcost,damage){
+	PlasmaRifle::PlasmaRifle(const std::string &name,int apcost, int damage):AWeapon(name,apcost,damage){
 
 
 

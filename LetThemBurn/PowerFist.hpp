@@ -1,12 +1,12 @@
 #ifndef POWERFIST
 #define POWERFIST
-#include "AWeapon.hh"
+#include "AWeapon.hpp"
 
 
 class PowerFist: public AWeapon
 {
 public:
-	PowerFist(const std::string &name,int apcost, int damage);
+	PowerFist(const std::string &name = "Power Fist",int apcost = 8, int damage = 50);
 	~PowerFist()=default;
 	virtual void attack() const;
 	

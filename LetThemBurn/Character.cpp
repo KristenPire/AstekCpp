@@ -69,6 +69,8 @@ If no weapon is equipped, attack() does nothing.
 		std::cout << _name << " attacks " << enemy->getType() << " with a " << _weapon->getName() << std::endl;
 
 		_AP -= _weapon->getAPCost();
+		enemy->takeDamage(_weapon->getDamage());
+
 	}
 
 
