@@ -11,9 +11,9 @@ class Victim{
 
 		std::string getName() const;
 
-		void getPolymorphed() const;
+		virtual void getPolymorphed() const;
 
-	private:
+	protected:
 		const std::string _name;
 };
 

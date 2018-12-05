@@ -6,9 +6,14 @@ int main(){
 	std::cout << s << std::endl << std::endl;
 
 	Victim v;
-	std::cout << v << std::endl << std::endl;
+	Peon p("Garren");
+	std::cout << std::endl;
+
+	std::cout << v << std::endl;
+	std::cout << p << std::endl << std::endl;
 
 	s.polymorph(v);
+	s.polymorph(p);
 	std::cout << std::endl;
 
 	return 0;
