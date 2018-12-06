@@ -7,20 +7,24 @@ namespace WarpSystem {
 		private:
 			bool _stability;
 			
+			QuantumReactor(const QuantumReactor &) = delete;
+			
 		public:
 			QuantumReactor();
-			~QuantumReactor() = default;
-			bool isStable () ;
-			void setStability (bool stability) ;
+			virtual ~QuantumReactor() = default;
+			bool isStable();
+			void setStability(bool stability);
 	};
 	
 	class Core{
 		private:
 			QuantumReactor *_coreReactor;
 			
+			Core(const Core &) = delete;
+			
 		public:
 			Core(QuantumReactor *coreReactor);
-			~Core() = default;
+			virtual ~Core() = default;
 			QuantumReactor *checkReactor();
 	};
 };
