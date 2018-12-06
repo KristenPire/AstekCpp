@@ -6,7 +6,7 @@
 #include <string>
 
 class Mage
-: public Character
+: public virtual Character
 {
 protected:
 

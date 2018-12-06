@@ -1,10 +1,11 @@
 #include "Priest.hpp"
+#include "Mage.hpp"
 #include "Character.hpp"
 
 #include <iostream>
 #include <string>
 
-Priest::Priest(const std::string &name, int level) : Mage(name, level)
+Priest::Priest(const std::string &name, int level) : Character(name, level), Mage(name, level)
 {
 	_PV = 100;
 	_class = "Priest";

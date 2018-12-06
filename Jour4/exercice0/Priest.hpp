@@ -8,7 +8,7 @@
 class Priest
 : public Mage
 {
-private:
+protected:
 
 
 
@@ -20,7 +20,7 @@ public:
 	int RangeAttack();
 
 	void Heal();
-	void RestorePower();
+	
 
 
 };

@@ -6,9 +6,9 @@
 #include <string>
 
 class Warrior
-: public Character
+: public virtual Character
 {
-private:
+protected:
 	const std::string _weapon;
 
 
