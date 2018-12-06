@@ -5,9 +5,9 @@
 
 Warrior::Warrior(const std::string &name, int level, const std::string weapon) : Character(name, level), _weapon(weapon)
 {
-	_level = level;
 	_PV = 100;
 	_race = "Warrior";
+	_class = "Dwarf";
 
 	_power = 100;
 	_strength = 12;

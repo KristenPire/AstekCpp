@@ -31,6 +31,7 @@ public:
 protected:
 	const std::string _name;
 	std::string _race;
+	std::string _class;
 	int _level;
 	int _PV;
 	int _power;

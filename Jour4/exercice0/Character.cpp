@@ -8,6 +8,7 @@ Character::Character(const std::string &name, int level) : _name(name), _race("K
 {
 	_level = level;
 	_PV = 100;
+	_class = "Character";
 
 	_power = 100;
 	_strength = 5;
