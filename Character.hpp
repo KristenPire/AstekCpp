@@ -33,6 +33,7 @@ public:
 
 protected:
 	const std::string _name;
+	std::string _race;
 	int _level;
 	int _stamina;
 	int _spirit;

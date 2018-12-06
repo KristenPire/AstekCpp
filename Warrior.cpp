@@ -6,6 +6,7 @@ Warrior::Warrior(std::string name, int level,std::string weaponName):Character(n
 	_agility=7;
 	_strength=12;
 	_intelligence=6;
+	_race="Gnome";
 	std::cout<< " I'm " << _name << "KKKKKKKRRRRRRRRREEEEEOOOOOOOORRRRRGGGGGG"<<std::endl;
 
 };
