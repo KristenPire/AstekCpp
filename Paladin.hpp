@@ -17,7 +17,7 @@ public:
 	using Priest :: RangeAttack;
 	using Priest :: Heal;
 	using Warrior :: RestorePower;
-	
+	int Intercept();
 
 
 

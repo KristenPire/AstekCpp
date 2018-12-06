@@ -11,3 +11,6 @@ Paladin::Paladin(const std::string &name,int level):Character(name,level), Warri
 	_intelligence=10;
 };
 
+int Paladin::Intercept(){
+	return this->CloseAttack();
+};

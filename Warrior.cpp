@@ -14,6 +14,7 @@ Warrior::Warrior(std::string name, int level,std::string weaponName):Character(n
 int Warrior::RangeAttack(){
 	if (_energy>=10){
 		_energy-=10;
+		_range=CLOSE;
 		std::cout<< _name<<" intercepts"<<std::endl;
 		return 0;
 	}else {

@@ -27,11 +27,11 @@ int Mage::CloseAttack(){
 	if (_energy>=10){
 		_energy-=10;
 		return 10;
+		_range=RANGE;
 	}else {
 		std::cout<<" attack failed, not enough energy"<<std::endl;
 		return 0;
 	}
-
 };
 
 int Mage::RangeAttack(){
