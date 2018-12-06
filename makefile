@@ -8,7 +8,8 @@ CFLAGS	+= -W -Wall -Wextra -Wfatal-errors
 CXXFLAGS = -std=c++17
 
 SRC	=	Federation.cpp \
-		WarpSystem.cpp 
+		WarpSystem.cpp \
+		main.cpp
 		
 
 OBJS	= $(SRC:.cpp=.o) #

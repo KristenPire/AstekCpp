@@ -28,7 +28,7 @@ namespace WarpSystem
 
 		public:
 			Core(QuantumReactor* coreReactor);
-			virtual ~Core() = default;
+			virtual ~Core();
 			const QuantumReactor* checkReactor() const;
 
 	};

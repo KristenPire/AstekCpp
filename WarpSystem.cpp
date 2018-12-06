@@ -9,7 +9,7 @@ WarpSystem::QuantumReactor::QuantumReactor():_stability(true){
 }
 
 
-bool WarpSystem::QuantumReactor::isStable(){
+bool WarpSystem::QuantumReactor::isStable() const{
 /*
 
 	function which verifies the stability of the QuantumReactor
@@ -37,6 +37,14 @@ void WarpSystem::QuantumReactor::setStability(bool stability){
 WarpSystem::Core::Core(WarpSystem::QuantumReactor* coreReactor):_coreReactor(coreReactor){
 
 
+
+}
+
+
+WarpSystem::Core::~Core(){
+
+
+	// delete _coreReactor;
 
 }
 

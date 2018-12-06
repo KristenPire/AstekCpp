@@ -20,9 +20,9 @@ namespace Federation
 
 			public:
 				Ship(int length,int width, std::string name, short maxWarp);
-				virtual ~Ship()=default;
+				virtual ~Ship();
 				void setupCore(WarpSystem::Core* core);
-
+				const void checkCore();
 		};
 
 	};
@@ -33,17 +33,16 @@ namespace Federation
 				const int _length;
 				const int _width;
 				const std::string _name;
-				const short _maxWarp;
 				WarpSystem::Core* _core;
 
 			public:
-				Ship(int length,int width, std::string name, short maxWarp);
+				Ship(int length,int width, std::string name);
 				virtual ~Ship()=default;
 				void setupCore(WarpSystem::Core* core);
-
+				const void checkCore();
 		};
 
-		
+
 
 };
 
