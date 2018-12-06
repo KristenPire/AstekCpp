@@ -1,12 +1,10 @@
 
 #include "Character.hpp"
-
 #include "Warrior.hpp"
-
 #include "Mage.hpp"
 #include "Priest.hpp"
-
 #include "Paladin.hpp"
+#include "Hunter.hpp"
 
 int main(){
 	
