@@ -24,10 +24,10 @@ public:
 
 	AttackRange _range;
 
-	virtual int CloseAttack();
-	virtual int RangeAttack();
-	virtual void Heal();
-	virtual void RestorePower();
+	int CloseAttack();
+	int RangeAttack();
+	void Heal();
+	void RestorePower();
 
 	void TakeDamage (int damage);
 

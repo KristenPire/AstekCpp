@@ -5,7 +5,7 @@
 #include <string>
 #include"Character.hpp"
 
-class Warrior : public Character{
+class Warrior : public virtual Character{
 public:
 	Warrior(std::string name, int level,std::string weaponName);
 	virtual ~Warrior()=default;

@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-class Mage: public Character{
+class Mage: public virtual Character{
 public:
 	Mage(const std::string &name,int level);
 	virtual  ~Mage()=default;

@@ -45,7 +45,7 @@ int Mage::RangeAttack(){
 	}
 };
 
-Priest::Priest(const std::string &name,int level):Mage(name,level){
+Priest::Priest(const std::string &name,int level):Character(name,level),Mage(name,level){
 	std::cout<< _name << " enters in the order "<<std::endl;
 	_race="Orc";
 	_stamina=4;
