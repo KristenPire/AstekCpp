@@ -32,6 +32,8 @@ class Character{
 		virtual void RestorePower();
 		void TakeDamage(int damage);
 		
+		virtual void displayStats(); //For testing
+		
 		enum AttackRange{
 			CLOSE,
 			RANGE

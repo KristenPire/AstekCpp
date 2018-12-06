@@ -56,7 +56,7 @@ int Character::RangeAttack(){
 	
 }
 void Character::Heal(){
-	if(_pv <50){
+	if(_pv < 50){
 		_pv += 50;
 	}
 	else _pv = 100;	
@@ -77,4 +77,19 @@ void Character::TakeDamage(int damage){
 	if(_pv <= 0){
 		std::cout << _name << " out of combat" << std::endl;
 	}
+}
+
+
+void Character::displayStats(){
+	std::cout << "Name : " << _name << std::endl;
+	std::cout << "Level : " << _level << std::endl;
+	std::cout << "PV : " << _pv << std::endl;
+	std::cout << "Energy : " << _power << std::endl;
+	
+	std::cout << "Strength : " << _strength << std::endl;
+	std::cout << "Stamina : " << _stamina << std::endl;
+	std::cout << "Intelligence : " << _intelligence << std::endl;
+	std::cout << "Spirit : " << _spirit << std::endl;
+	std::cout << "Agility : " << _agility << std::endl;
+	
 }

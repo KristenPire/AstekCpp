@@ -6,29 +6,32 @@
 
 
 int main(){
-	Character c("Bob-Théodule", 7);
-	c.TakeDamage(50);
-	int a = c.CloseAttack();
-	std::cout << a << std::endl;
-	a = c.RangeAttack();
-	
-	c.Range = Character::RANGE;
-	a = c.CloseAttack();
-	a = c.RangeAttack();
-	std::cout << a << std::endl;
-	
-	c.Range = Character::CLOSE;
-	a = c.CloseAttack();
-	a = c.RangeAttack();
-	
-	c.Heal();
-	c.TakeDamage(50);
-	c.TakeDamage(100);
-	c.TakeDamage(100);
-	
 	
 	Character kreog("Kreog", 1);
 	Warrior thor("Thor", 42, "Axe");
+	kreog.displayStats();
+	std::cout << "-------------------------------------------------"<< std::endl;
+	thor.displayStats();
+	
+	thor.TakeDamage(50);
+	int a = thor.CloseAttack();
+	std::cout << a << std::endl;
+	a = thor.RangeAttack();
+	
+	thor.Range = Character::RANGE;
+	a = thor.CloseAttack();
+	a = thor.RangeAttack();
+	std::cout << a << std::endl;
+	
+	a = thor.CloseAttack();
+	a = thor.RangeAttack();
+	
+	thor.Heal();
+	thor.TakeDamage(50);
+	thor.TakeDamage(100);
+	thor.TakeDamage(100);
+	
+	thor.displayStats();
 	
 	return 0;
 }
