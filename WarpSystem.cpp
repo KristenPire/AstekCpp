@@ -17,3 +17,15 @@ bool WarpSystem::QuantumReactor::isStable(){
 void  WarpSystem::QuantumReactor::setStability(bool stability){
 	_stability=stability;
 }
+
+// constructeur du core reactor
+
+WarpSystem::Core::Core(QuantumReactor * coreReactor ){
+	_coreReactor=coreReactor;
+}
+
+// getteur du reactor
+
+WarpSystem::QuantumReactor* WarpSystem::Core::checkReactor(){
+	return _coreReactor;
+};

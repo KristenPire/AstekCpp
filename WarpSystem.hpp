@@ -14,6 +14,15 @@ namespace WarpSystem{
 	private:
 		bool _stability;
 	};
+
+	class Core{
+	public:
+		Core(QuantumReactor * coreReactor);
+		virtual ~Core()=default;
+		QuantumReactor* checkReactor();
+	private:
+		QuantumReactor * _coreReactor;
+	};
 };
 
 
