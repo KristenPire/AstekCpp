@@ -25,17 +25,17 @@ void WarpSystem::QuantumReactor::setStability(bool stability)
 
 
 
-WarpSystem::QuantumReactor::Core::Core(QuantumReactor *coreReactor)
+WarpSystem::Core::Core(QuantumReactor *coreReactor)
 {
 	_coreReactor = coreReactor;
 }
 
-WarpSystem::QuantumReactor::Core::~Core()
+WarpSystem::Core::~Core()
 {
 	std::cout<<"The core is now offline"<<std::endl;
 }
 
-WarpSystem::QuantumReactor *WarpSystem::QuantumReactor::Core::checkReactor()
+WarpSystem::QuantumReactor *WarpSystem::Core::checkReactor()
 {
 	return _coreReactor;
 }

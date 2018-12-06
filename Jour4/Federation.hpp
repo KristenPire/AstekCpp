@@ -18,16 +18,35 @@ namespace Federation
 			const std::string _name;
 			const short _maxWarp;
 
-			WarpSystem::QuantumReactor::Core *_core;
+			WarpSystem::Core *_core;
 
 
 		public:
 			Ship(int length, int width, std::string name, short maxWarp);
-			virtual ~Ship() = default;
+			virtual ~Ship();
 
-			void setupCore(WarpSystem::QuantumReactor::Core *core);
-
+			void setupCore(WarpSystem::Core *core);
+			void checkCore();
 		};
+	};
+
+	class Ship
+	{
+	private:
+		const int _length;
+		const int _width;
+		const std::string _name;
+		const short _maxWarp;
+
+		WarpSystem::Core *_core;
+
+
+	public:
+		Ship(int length, int width, std::string name);
+		virtual ~Ship() = default;
+
+		void setupCore(WarpSystem::Core *core);
+		void checkCore();
 	};
 };
 

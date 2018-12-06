@@ -7,7 +7,19 @@ namespace WarpSystem
 	{
 	private:
 		bool _stability;
-		class Core
+		
+
+
+	public:
+		QuantumReactor();
+		virtual ~QuantumReactor();
+
+		bool isStable();
+		void setStability(bool stability);
+	};
+	
+
+	class Core
 		{
 		private:
 			QuantumReactor *_coreReactor;
@@ -19,23 +31,6 @@ namespace WarpSystem
 
 			QuantumReactor *checkReactor();
 		};
-
-
-
-	public:
-		QuantumReactor();
-		virtual ~QuantumReactor();
-
-		bool isStable();
-		void setStability(bool stability);
-
-
-
-	};
-
 };
-
-
-
 
 #endif
