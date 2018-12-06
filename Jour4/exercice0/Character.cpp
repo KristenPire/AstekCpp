@@ -45,7 +45,7 @@ int Character::CloseAttack()
 	if (_power-10>=0)
 	{
 		_power -= 10;
-		std::cout<<_name<<" strikes with a wooden stick !"<<std::endl;
+		std::cout<<_name<<" strikes with a wooden stick !"<<" and deals "<<(20+_strength)<<" damage"<<std::endl;
 		return (10+_strength);
 	}
 	else
@@ -61,7 +61,7 @@ int Character::RangeAttack()
 	if (_power-10>=0)
 	{
 		_power -= 10;
-		std::cout<<_name<<" tosses a stone !"<<std::endl;
+		std::cout<<_name<<" tosses a stone !"<<" and deals "<<(5+_strength)<<" damage"<<std::endl;
 		return (5+_strength);
 	}
 	else

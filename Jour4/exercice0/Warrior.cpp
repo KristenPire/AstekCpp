@@ -31,7 +31,7 @@ int Warrior::CloseAttack()
 	if (_power-30>=0)
 	{
 		_power -= 30;
-		std::cout<<_name<<" strikes with his "<< _weapon<<std::endl;
+		std::cout<<_name<<" strikes with his "<< _weapon<<" and deals "<<(20+_strength)<<" damage"<<std::endl;
 		return (20+_strength);
 	}
 	else

@@ -32,7 +32,7 @@ int Mage::CloseAttack()
 	if (_power-10>=0)
 	{
 		_power -= 10;
-		std::cout<<_name<<" blinks"<<std::endl;
+		std::cout<<_name<<" blinks"<<" and deals "<<0<<" damage"<<std::endl;
 		_currentRange = Character::RANGE;
 		return 0;
 	}
@@ -48,7 +48,7 @@ int Mage::RangeAttack()
 	if (_power-25>=0)
 	{
 		_power -= 25;
-		std::cout<<_name<<" launches a fireball !"<<std::endl;
+		std::cout<<_name<<" launches a fireball !"<<" and deals "<<(20+_spirit)<<" damage"<<std::endl;
 		return (20+_spirit);
 	}
 	else
