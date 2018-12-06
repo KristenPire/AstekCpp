@@ -4,13 +4,51 @@
 #include <iostream>
 #include <string>
 
+
+
+
 class Character{
-private:
-	Character(std::string name, int level);
-	virtual ~Character()=default;
 public:
-	std::string _name;
+	Character(const std::string name, int level);
+	virtual ~Character()=default;
+
+	const std::string  & getName() const;
+	int getLvl()const;
+	int getPv() const;
+	int getPower() const;
+
+	enum AttackRange{
+	CLOSE,
+	RANGE
+	};
+
+	AttackRange _range;
+
+	int CloseAttack();
+	int RangeAttack();
+	void Heal();
+	void RestorePower();
+
+	void TakeDamage (int damage);
+
+protected:
+	const std::string _name;
 	int _level;
+	int _stamina;
+	int _spirit;
+	int _agility;
+	int _strength;
+	int _intelligence;
+	int _pv;
+	int _energy;
+	
+};
+
+class Warrior : public Character{
+public:
+	Warrior(std::string name, int level,int stamina, int spirit, int agility, int strength, int intelligence);
+	virtual ~Warrior()=default;
+private:
 };
 
 
