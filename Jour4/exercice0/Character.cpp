@@ -45,12 +45,13 @@ int Character::CloseAttack()
 {
 	if (_power-10>=0)
 	{
-		_power -= 10,
+		_power -= 10;
 		return (10+_strength);
 	}
 	else
 	{
 		std::cout<<_name<<" out of power"<<std::endl;
+		return 0;
 	}
 	
 }
@@ -59,12 +60,13 @@ int Character::RangeAttack()
 {
 	if (_power-10>=0)
 	{
-		_power -= 10,
+		_power -= 10;
 		return (5+_strength);
 	}
 	else
 	{
 		std::cout<<_name<<" out of power"<<std::endl;
+		return 0;
 	}
 }
 
@@ -95,10 +97,18 @@ void Character::RestorePower()
 
 void Character::TakeDamage(int damage)
 {
-	std::cout<<_name<<" takes "<<damage<<" damage !"<<std::endl;
-	_PV -= damage;
-	if (_PV<=0)
+	
+	if (_PV<damage)
 	{
+		//std::cout<<_name<<" takes "<<_PV<<" damage !"<<std::endl;
+		_PV =0;
 		std::cout<<_name<<" out of combat..."<<std::endl;
 	}
+	else
+	{
+		_PV -= damage;
+		std::cout<<_name<<" takes "<<damage<<" damage !"<<std::endl;
+
+	}
+	
 }
