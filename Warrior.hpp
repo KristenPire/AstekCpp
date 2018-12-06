@@ -2,7 +2,7 @@
 #define WARRIOR
 #include "Character.hpp"
 
-class Warrior:public Character
+class Warrior:public virtual Character
 {
 
 protected:
@@ -10,10 +10,10 @@ protected:
 public:
 	Warrior(const std::string &name,const std::string& race,const std::string& Weapon, int level);
 	virtual ~Warrior()=default;
-	virtual int CloseAttack();
-	virtual int RangeAttack();
-	virtual void Heal();
-	virtual void RestorePower();
+	int CloseAttack();
+	int RangeAttack();
+	void Heal();
+	void RestorePower();
 };
 
 

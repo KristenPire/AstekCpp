@@ -33,10 +33,10 @@ public:
 	int getLvl() const;
 	int getPV() const;
 	int getPower() const;
-	virtual int CloseAttack();
-	virtual int RangeAttack();
-	virtual void Heal();
-	virtual void RestorePower();
+	int CloseAttack();
+	int RangeAttack();
+	void Heal();
+	void RestorePower();
 	void TakeDamage(int damage);
 	
 };

@@ -1,9 +1,9 @@
-#include "Character.hpp"
+#include "Paladin.hpp"
 
 
 int main(){
 
-	Character c("poney","Orc",42);
+	Paladin c("poney","Orc","Axe",42);
 	
 	c.TakeDamage(50);
 	c.TakeDamage(200);

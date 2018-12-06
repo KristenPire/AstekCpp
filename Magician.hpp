@@ -3,15 +3,15 @@
 
 #include "Character.hpp"
 
-class Magician: public Character
+class Magician: public virtual Character
 {
 public:
 	Magician(const std::string &name,const std::string& race, int level);
 	virtual ~Magician()=default;
-	virtual int CloseAttack();
-	virtual int RangeAttack();
-	virtual void Heal();
-	virtual void RestorePower();
+	int CloseAttack();
+	int RangeAttack();
+	void Heal();
+	void RestorePower();
 };
 
 #endif

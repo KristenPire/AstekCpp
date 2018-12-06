@@ -1,7 +1,7 @@
 
 #include "Priest.hpp"
 
-	Priest::Priest(const std::string &name,const std::string& race, int level):Magician(name,race,level){
+	Priest::Priest(const std::string &name,const std::string& race, int level):Character(name,race,level),Magician(name,race,level){
 
 
 		_carac[Strength] = 4;
