@@ -4,12 +4,10 @@
 #include <iostream>
 
 
-Character::Character(const std::string &name, int level) : _name(name)
+Character::Character(const std::string &name, int level) : _name(name), _race("Koala")
 {
 	_level = level;
 	_PV = 100;
-
-	_race = "Koala";
 
 	_power = 100;
 	_strength = 5;
@@ -46,6 +44,7 @@ int Character::CloseAttack()
 	if (_power-10>=0)
 	{
 		_power -= 10;
+		std::cout<<_name<<" strikes with a wooden stick !"<<std::endl;
 		return (10+_strength);
 	}
 	else
@@ -61,6 +60,7 @@ int Character::RangeAttack()
 	if (_power-10>=0)
 	{
 		_power -= 10;
+		std::cout<<_name<<" tosses a stone !"<<std::endl;
 		return (5+_strength);
 	}
 	else
@@ -80,6 +80,7 @@ void Character::Heal()
 	{
 		_PV = 100;
 	}
+	std::cout<<_name<<" takes a potion"<<std::endl;
 }
 
 void Character::RestorePower()
@@ -92,6 +93,7 @@ void Character::RestorePower()
 	{
 		_power = 100;
 	}
+	std::cout<<_name<<" eats"<<std::endl;
 }
 
 

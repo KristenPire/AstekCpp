@@ -28,7 +28,6 @@ public:
 		RANGE
 	};
 
-
 protected:
 	const std::string _name;
 	std::string _race;
@@ -41,12 +40,6 @@ protected:
 	int _strength;
 	int _intelligence;
 	Range _currentRange;
-
 };
-
-
-
-
-
 
 #endif
