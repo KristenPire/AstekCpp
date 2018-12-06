@@ -13,7 +13,8 @@ class Character{
 		int _intelligence;
 		int _spirit;
 		int _agility;
-		
+	
+	private:	
 		Character(const Character &) = delete;
 		
 	

@@ -6,13 +6,7 @@
 #endif
 
 class Warrior : public Character{
-	private:
-		int _strength;
-		int _stamina;
-		int _intelligence;
-		int _spirit;
-		int _agility;
-		
+	private:		
 		const std::string _weaponName;
 		
 		Warrior(const Warrior &) = delete;
@@ -24,5 +18,5 @@ class Warrior : public Character{
 		virtual int CloseAttack();
 		virtual int RangeAttack();
 		
-		virtual void displayStats(); //For testing
+		virtual void displayStats(); //For testing, redefined to display Warrior's weapon
 };

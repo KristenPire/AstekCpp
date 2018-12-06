@@ -5,15 +5,8 @@
 #include "Character.hpp"
 #endif
 
-class Mage : public Character{
-	private:
-		int _strength;
-		int _stamina;
-		int _intelligence;
-		int _spirit;
-		int _agility;
-		
-		
+class Mage : public Character{		
+	private:	
 		Mage(const Mage &) = delete;
 	
 	public:
@@ -24,5 +17,4 @@ class Mage : public Character{
 		virtual int RangeAttack();
 		virtual void RestorePower();
 		
-		virtual void displayStats(); //For testing
 };

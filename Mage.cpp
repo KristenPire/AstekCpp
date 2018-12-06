@@ -57,16 +57,3 @@ void Mage::RestorePower(){
 	std::cout << _name << " takes a mana potion" <<std::endl;
 }
 
-void Mage::displayStats(){
-	std::cout << "Name : " << _name << std::endl;
-	std::cout << "Level : " << _level << std::endl;
-	std::cout << "PV : " << _pv << std::endl;
-	std::cout << "Energy : " << _power << std::endl;
-	
-	std::cout << "Strength : " << _strength << std::endl;
-	std::cout << "Stamina : " << _stamina << std::endl;
-	std::cout << "Intelligence : " << _intelligence << std::endl;
-	std::cout << "Spirit : " << _spirit << std::endl;
-	std::cout << "Agility : " << _agility << std::endl;
-	
-}
