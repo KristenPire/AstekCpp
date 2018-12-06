@@ -7,7 +7,8 @@ RM	= rm -f
 CXXFLAGS	+= -std=c++11 -W -Wall -Wextra -Wfatal-errors -g -O0
 
 SRC	=	main.cpp \
-		Character.cpp 
+		Character.cpp \
+		Warrior.cpp
 
 
 OBJS	= $(SRC:.cpp=.o)	#Règle qui dit de trasformer les .cpp en .o

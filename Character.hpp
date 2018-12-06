@@ -2,7 +2,7 @@
 #include <string>
 
 class Character{
-	private:
+	protected:
 		const std::string _name;
 		int _level;
 		int _pv;
@@ -26,10 +26,10 @@ class Character{
 		int getPower() const;
 		
 		
-		int CloseAttack();
-		int RangeAttack();
-		void Heal();
-		void RestorePower();
+		virtual int CloseAttack();
+		virtual int RangeAttack();
+		virtual void Heal();
+		virtual void RestorePower();
 		void TakeDamage(int damage);
 		
 		enum AttackRange{

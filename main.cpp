@@ -1,4 +1,8 @@
+#ifndef CHARCTER
+#define CHARCTER
 #include "Character.hpp"
+#endif
+#include "Warrior.hpp"
 
 
 int main(){
@@ -21,5 +25,10 @@ int main(){
 	c.TakeDamage(50);
 	c.TakeDamage(100);
 	c.TakeDamage(100);
+	
+	
+	Character kreog("Kreog", 1);
+	Warrior thor("Thor", 42, "Axe");
+	
 	return 0;
 }
