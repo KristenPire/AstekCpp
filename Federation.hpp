@@ -12,6 +12,7 @@ namespace Federation{
 		class Ship{
 		public:
 			Ship(int length, int width,std::string name,short maxWrap);
+			virtual ~Ship()=default;
 			int getLength() const;
 			int getWidth() const;
 			const std::string & getName() const;
