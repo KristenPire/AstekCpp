@@ -13,7 +13,7 @@ namespace WarpSystem
 		public:
 			QuantumReactor();
 			virtual ~QuantumReactor()=default;
-			bool isStable();
+			bool isStable() const;
 			void setStability(bool stability);
 
 
