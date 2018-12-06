@@ -10,6 +10,7 @@ CXXFLAGS += -std=c++17
 SRC	=	Character.cpp \
 		Warrior.cpp \
 		Magician.cpp \
+		Priest.cpp \
 		main.cpp 
 		
 
