@@ -30,6 +30,8 @@ int Warrior::RangeAttack(){
 		std::cout << _name << " can't use a long range weapon" << std::endl;
 		std::cout << _name << " intercepts" << std::endl;
 
+	Warrior::CloseAttack();
+
 	return 0;
 
 	}

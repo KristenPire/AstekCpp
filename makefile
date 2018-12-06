@@ -12,6 +12,7 @@ SRC	=	Character.cpp \
 		Magician.cpp \
 		Priest.cpp \
 		Paladin.cpp \
+		Hunter.cpp \
 		main.cpp 
 		
 
