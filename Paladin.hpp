@@ -13,10 +13,11 @@ public:
 	Paladin(const std::string &name,int level);
 	virtual ~Paladin()=default;
 	
-	//int CloseAttack();
-	//int RangeAttack();
-	//void heal();
-	//void RestorePower();
+	using Warrior :: CloseAttack;
+	using Priest :: RangeAttack;
+	using Priest :: Heal;
+	using Warrior :: RestorePower;
+	
 
 
 
