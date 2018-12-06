@@ -14,7 +14,7 @@ int main(){
 	//~ std::cout << "-------------------------------------------------"<< std::endl;
 	//~ thor.displayStats();
 	
-	Paladin c("Palouf", 76);
+	Hunter c("The hunter", 53);
 	c.displayStats();
 	c.TakeDamage(80);
 	int a = c.CloseAttack();
@@ -25,11 +25,7 @@ int main(){
 	a = c.CloseAttack();
 	a = c.RangeAttack();
 	std::cout << a << std::endl;
-	
-	c.Intercept();
-	a = c.RangeAttack();
-	a = c.CloseAttack();
-	c.displayStats();
+
 	
 	c.RestorePower();
 	c.Heal();
