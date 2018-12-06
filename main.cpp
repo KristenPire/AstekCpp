@@ -3,35 +3,41 @@
 #include "Character.hpp"
 #endif
 #include "Warrior.hpp"
+#include "Mage.hpp"
+#include "Priest.hpp"
 
 
 int main(){
 	
-	Character kreog("Kreog", 1);
-	Warrior thor("Thor", 42, "Axe");
-	kreog.displayStats();
-	std::cout << "-------------------------------------------------"<< std::endl;
-	thor.displayStats();
+	//~ Character kreog("Kreog", 1);
+	//~ Warrior thor("Thor", 42, "Axe");
+	//~ kreog.displayStats();
+	//~ std::cout << "-------------------------------------------------"<< std::endl;
+	//~ thor.displayStats();
 	
-	thor.TakeDamage(50);
-	int a = thor.CloseAttack();
+	Mage c("Bobimus", 37);
+	c.displayStats();
+	c.TakeDamage(50);
+	int a = c.CloseAttack();
 	std::cout << a << std::endl;
-	a = thor.RangeAttack();
-	
-	thor.Range = Character::RANGE;
-	a = thor.CloseAttack();
-	a = thor.RangeAttack();
+	a = c.RangeAttack();
+
+	a = c.CloseAttack();
+	a = c.RangeAttack();
 	std::cout << a << std::endl;
 	
-	a = thor.CloseAttack();
-	a = thor.RangeAttack();
+	c.Range = Character::CLOSE;
+	a = c.RangeAttack();
+	a = c.CloseAttack();
 	
-	thor.Heal();
-	thor.TakeDamage(50);
-	thor.TakeDamage(100);
-	thor.TakeDamage(100);
+	c.Heal();
+	c.TakeDamage(50);
+	c.TakeDamage(100);
+	c.TakeDamage(100);
 	
-	thor.displayStats();
+	c.RestorePower();
+	
+	c.displayStats();
 	
 	return 0;
 }
