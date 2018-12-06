@@ -1,7 +1,7 @@
 #include "Priest.hpp"
 
 
-Priest::Priest(const std::string &name, int level): Mage(name, level){
+Priest::Priest(const std::string &name, int level): Character(name, level), Mage(name, level){
 	_strength = 4;
 	_stamina = 4;
 	_intelligence= 42;

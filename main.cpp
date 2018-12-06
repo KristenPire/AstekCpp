@@ -1,14 +1,12 @@
-#ifndef CHARCTER
-#define CHARCTER
+
 #include "Character.hpp"
-#endif
+
 #include "Warrior.hpp"
-#ifndef MAGE
-#define MAGE
+
 #include "Mage.hpp"
-#endif
 #include "Priest.hpp"
 
+#include "Paladin.hpp"
 
 int main(){
 	
@@ -18,33 +16,30 @@ int main(){
 	//~ std::cout << "-------------------------------------------------"<< std::endl;
 	//~ thor.displayStats();
 	
-	Priest c("Marcel II", 76);
+	Paladin c("Palouf", 76);
 	c.displayStats();
 	c.TakeDamage(80);
 	int a = c.CloseAttack();
 	std::cout << a << std::endl;
 	a = c.RangeAttack();
 
+	c.Range = Character::RANGE;
 	a = c.CloseAttack();
 	a = c.RangeAttack();
 	std::cout << a << std::endl;
 	
-	c.Range = Character::CLOSE;
+	c.Intercept();
 	a = c.RangeAttack();
 	a = c.CloseAttack();
 	c.displayStats();
 	
-	
+	c.RestorePower();
 	c.Heal();
 	c.displayStats();
 	
 	c.TakeDamage(50);
 	c.TakeDamage(100);
 	c.TakeDamage(100);
-	
-	c.RestorePower();
-	
-	c.displayStats();
 	
 	return 0;
 }

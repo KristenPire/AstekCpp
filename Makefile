@@ -10,7 +10,8 @@ SRC	=	main.cpp \
 		Character.cpp \
 		Warrior.cpp \
 		Mage.cpp \
-		Priest.cpp
+		Priest.cpp \
+		Paladin.cpp
 
 
 OBJS	= $(SRC:.cpp=.o)	#Règle qui dit de trasformer les .cpp en .o

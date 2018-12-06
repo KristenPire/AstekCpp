@@ -1,7 +1,7 @@
-#ifndef MAGE
-#define MAGE
+
 #include "Mage.hpp"
-#endif
+#ifndef PRIEST
+#define PRIEST
 
 class Priest : public Mage{
 	private:		
@@ -9,10 +9,11 @@ class Priest : public Mage{
 	
 	public:
 		Priest(const std::string &name ,int level);
-		//Displays mage's words too
 		virtual ~Priest() = default;
 		
 		virtual int CloseAttack();
 		virtual void Heal();
 		
 };
+
+#endif

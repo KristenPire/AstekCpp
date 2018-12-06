@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-#ifndef CHARCTER
-#define CHARCTER
 #include "Character.hpp"
-#endif
+#ifndef WARRIOR
+#define WARRIOR
 
-class Warrior : public Character{
+
+class Warrior : public virtual Character{
 	private:		
 		const std::string _weaponName;
 		
@@ -15,8 +15,10 @@ class Warrior : public Character{
 		Warrior(const std::string &name ,int level, const std::string &weaponName);
 		virtual ~Warrior() = default;
 		
-		virtual int CloseAttack();
-		virtual int RangeAttack();
+		int CloseAttack();
+		int RangeAttack();
 		
 		virtual void displayStats(); //For testing, redefined to display Warrior's weapon
 };
+
+#endif

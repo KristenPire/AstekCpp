@@ -64,10 +64,7 @@ void Character::Heal(){
 }
 
 void Character::RestorePower(){
-	if(_power < 50){
-		_power += 50;
-	}	
-	else _power = 100;	
+	_power = 100;	
 	std::cout << _name << " eats" <<std::endl;
 }
 

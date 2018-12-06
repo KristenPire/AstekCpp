@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-#ifndef CHARCTER
-#define CHARCTER
-#include "Character.hpp"
-#endif
 
-class Mage : public Character{		
+#include "Character.hpp"
+#ifndef MAGE
+#define MAGE
+
+class Mage : public virtual Character{	// Declarer le virtul à la base du diamant, pas juste avant la classe qui duble-hérite	
 	private:	
 		Mage(const Mage &) = delete;
 	
@@ -18,3 +18,5 @@ class Mage : public Character{
 		virtual void RestorePower();
 		
 };
+
+#endif

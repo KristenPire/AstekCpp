@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-
+#ifndef CHARACTER
+#define CHARACTER
 class Character{
 	protected:
 		const std::string _name;
@@ -27,10 +28,10 @@ class Character{
 		int getPower() const;
 		
 		
-		virtual int CloseAttack();
-		virtual int RangeAttack();
-		virtual void Heal();
-		virtual void RestorePower();
+		int CloseAttack();
+		int RangeAttack();
+		void Heal();
+		void RestorePower();
 		void TakeDamage(int damage);
 		
 		virtual void displayStats(); //For testing
@@ -43,3 +44,4 @@ class Character{
 };
 	
 	
+#endif
