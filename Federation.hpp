@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "WarpSystem.hpp"
 
 
 namespace Federation{
@@ -17,12 +18,14 @@ namespace Federation{
 			int getWidth() const;
 			const std::string & getName() const;
 			short getMaxWrap()const;
+			void setupCore (WarpSystem::Core * core);
 
 		private:
 			const int _length;
 			const int _width;
 			const std::string _name;
 			const short _maxWrap;
+			WarpSystem::Core *_core;
 		};
 	};
 };
