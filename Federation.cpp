@@ -3,7 +3,8 @@
 // constructeur
 
 Federation::Starfleet::Ship::Ship(int length, int width,std::string name,short maxWrap):_length(length),_width(width),_name(name),_maxWrap(maxWrap){
-
+	std::cout<< " This ship USS " << _name << " has been finished . It is "<< _length << "m in length and " << _width << "m in width ."<<std::endl;
+	std::cout<< " It can go to Wrap " << _maxWrap<< "!"<<std::endl;
 };
 
 // getteurs
