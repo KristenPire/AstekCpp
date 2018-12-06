@@ -23,20 +23,25 @@ public:
 	int _level;
 	enum AttackRange {CLOSE,RANGE};
 	enum carac {Strength,Stamina,Intelligence,Spirit,Agility};
+	
 	AttackRange _range;
 	Character(const std::string &name,const std::string& race, int level);
 	virtual ~Character()=default;
 	const std::string& getName() const;
+	const std::array<int,5>& getCarac() const;
+	const std::string& getRace() const;
 	int getLvl() const;
 	int getPV() const;
 	int getPower() const;
-	int CloseAttack();
-	int RangeAttack();
-	void Heal();
-	void RestorePower();
+	virtual int CloseAttack();
+	virtual int RangeAttack();
+	virtual void Heal();
+	virtual void RestorePower();
 	void TakeDamage(int damage);
 	
 };
+
+std::ostream& operator<<(std::ostream& a, const Character& C);
 
 
 #endif

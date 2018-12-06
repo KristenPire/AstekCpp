@@ -2,13 +2,8 @@
 
 
 
-Character::Character(const std::string &name,const std::string& race, int level):_name(name),_race(race),_level(level),_PV(MAX),_power(MAX),_range(CLOSE){
+Character::Character(const std::string &name,const std::string& race, int level):_name(name),_race(race),_level(level),_PV(MAX),_power(MAX),_range(CLOSE),_carac({5,5,5,5,5}){
 
-	_carac[Strength] = 5;
-	_carac[Stamina] = 5;
-	_carac[Intelligence] = 5;
-	_carac[Spirit] = 5;
-	_carac[Agility] = 5;
 
 }
 
@@ -17,6 +12,20 @@ const std::string&  Character::getName() const{
 
 
 	return _name;
+
+}
+
+const std::array<int,5>& Character::getCarac() const{
+
+
+
+	return _carac;
+	
+}
+
+const std::string& Character::getRace() const{
+
+	return _race;
 
 }
 
@@ -97,4 +106,16 @@ void Character::TakeDamage(int damage){
 		std::cout << _name << " out of combat" << std::endl;
 
 	}
+}
+
+
+std::ostream& operator<<(std::ostream& a, const Character& C){
+
+	a << "\nPersonnage: " << C.getName() << std::endl;
+	a << "Niveau: " << C.getLvl() << std::endl;
+	a << "Race" << C.getRace() << std::endl;
+	a << "Hp: " << C.getPV() << "/" << MAX << std::endl;
+	a << "Power: " << C.getPower() << "/" << MAX << std::endl;
+
+	return a;
 }

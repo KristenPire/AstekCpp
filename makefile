@@ -4,11 +4,13 @@ NAME	= Fallout
 
 RM	= rm -f
 
-CFLAGS	+= -W -Wall -Wextra -Wfatal-errors 
-CXXFLAGS = -std=c++17
+CFLAGS	+= -std=c++17 -W -Wall -Wextra -Wfatal-errors 
+CXXFLAGS += -std=c++17
 
 SRC	=	Character.cpp \
-		# main.cpp 
+		Warrior.cpp \
+		Magician.cpp \
+		main.cpp 
 		
 
 OBJS	= $(SRC:.cpp=.o) #
@@ -16,7 +18,7 @@ OBJS	= $(SRC:.cpp=.o) #
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	 $(CC) $(OBJS) $(CFLAGS) -o $(NAME) $(CXXFLAGS)
+	 $(CC) $(OBJS) $(CXXFLAGS) $(CFLAGS) -o $(NAME) 
 
 clean:
 	$(RM) $(OBJS)
