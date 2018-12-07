@@ -11,7 +11,7 @@ static bool isGreaterThan(int a, int b)
 
 static void showMe(int i)
 {
-		std::cout << std::setw(4) << i << ``, ``;
+		std::cout << std::setw(4) << i << ",";
 }
 
 static void mult2(int& i)
@@ -35,6 +35,7 @@ int main()
 		std::cout << "============ Step 02 ==========" << std::endl;
 		std::cout << vHowMany(v1, 42) << std::endl;
 		std::cout << vHowMany(v2, 421) << std::endl;
+
 
 		std::cout << "============ Step 03 ==========" << std::endl;
 		std::cout << std::boolalpha << vIsSimilar(v1, tab) << std::endl;
