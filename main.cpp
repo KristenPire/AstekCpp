@@ -3,6 +3,7 @@
 
 #include "Cesar.hpp"
 #include "OneTime.hpp"
+#include "Encryption.hpp"
 #include "IEncryptionMethod.hpp"
 
 static void encryptString(IEncryptionMethod& encryptionMethod, std::string const& toEncrypt){
