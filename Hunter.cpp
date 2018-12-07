@@ -1,6 +1,6 @@
 #include "Hunter.hpp"
 
-Hunter:Hunter(const std::string &name, int level): Character(name, level), Warrior(name, level, "sword"){
+Hunter::Hunter(const std::string &name, int level): Character(name, level), Warrior(name, level, "sword"){
 	_strength = 9;
 	_stamina = 9;
 	_intelligence= 5;

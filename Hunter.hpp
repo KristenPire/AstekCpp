@@ -4,7 +4,7 @@
 #ifndef HUNTER
 #define HUNTER
 
-class Hunter : public Character, private Warrior{
+class Hunter : protected Warrior{
 	private:	
 		Hunter(const Hunter &) = delete;
 	
@@ -14,9 +14,12 @@ class Hunter : public Character, private Warrior{
 		
 		using Warrior::CloseAttack;
 		virtual int RangeAttack();
+		using Warrior::Heal;
 		virtual void RestorePower();
-		
+		using Warrior::TakeDamage;
 		using Warrior::displayStats;
+		
+		AttackRange Range;
 };
 
 #endif
