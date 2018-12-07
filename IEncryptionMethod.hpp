@@ -1,5 +1,8 @@
 #ifndef _IENCRYPTIONMETHODE_H__
-# define _IENCRYPTIONMETHODE_H__
+#define _IENCRYPTIONMETHODE_H__
+
+#include <iostream>
+#include <string>
 
 class IEncryptionMethod
 {
