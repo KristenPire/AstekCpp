@@ -6,22 +6,27 @@
 #include "Encryption.hpp"
 #include "IEncryptionMethod.hpp"
 
+#include <typeinfo>
+#include "type.hpp"
+
 static void encryptString(IEncryptionMethod& encryptionMethod, std::string const& toEncrypt){
-	size_t len = toEncrypt.size();
+	Encryption e(encryptionMethod, &IEncryptionMethod::encryptChar);
 	
 	encryptionMethod.reset();
+	size_t len = toEncrypt.size();
 	for(size_t i=0; i<len; ++i){
-		encryptionMethod.encryptChar(toEncrypt[i]);
+		e(toEncrypt[i]);
 	}
 	std::cout << std::endl;
 }
 
 static void decryptString(IEncryptionMethod& encryptionMethod, std::string const& toDecrypt){
-	size_t len = toDecrypt.size();
+	Encryption e(encryptionMethod, &IEncryptionMethod::decryptChar);
 	
 	encryptionMethod.reset();
+	size_t len = toDecrypt.size();
 	for(size_t i=0; i<len; ++i){
-		encryptionMethod.decryptChar(toDecrypt[i]);
+		e(toDecrypt[i]);
 	}
 	std::cout << std::endl;
 }
@@ -46,6 +51,12 @@ int main(){
 	decryptString(o, "Gi pa dunmhmp wu xg tuylx !");
 	decryptString(t, "Dpsp vm xaciw? Pk cxcvad otq rrykzsmla !");
 	
+	//~ std::cout << typeid(&IEncryptionMethod::decryptChar).name() << std::endl;
+	//~ std::string  q;
+	//~ std::cout << typeid(q).name() << std::endl;
+	
+	//~ std::cout << type(&IEncryptionMethod::decryptChar) << std::endl;
+	//~ std::cout << type(q) << std::endl;
 	
 	return 0;
 }
