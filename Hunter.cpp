@@ -12,7 +12,7 @@ Hunter::Hunter(std::string name, int level):Character(name,level),Warrior(name, 
 
 void Hunter::RestorePower(){
 	_energy=100;
-	std::cout<<_name<< "meditates"<<std::endl;
+	std::cout<<_name<< " meditates"<<std::endl;
 };
 
 int Hunter::RangeAttack(){
