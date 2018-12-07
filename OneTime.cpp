@@ -20,8 +20,7 @@ void OneTime::encryptChar(char plainchar){
 	if(isupper(_key[_pos])){
 		pos = _key[_pos] - 65;
 	}
-
-	pos = _key[_pos] - 97;
+	else{pos = _key[_pos] - 97;}
 	char a = 'z'- plainchar;
 
 
@@ -46,7 +45,7 @@ void OneTime::encryptChar(char plainchar){
 	}
 
 	_pos = (_pos+1) % _lenkey;
-	 // std::cout << " " << _compteur << " " ;
+	//std::cout << " " << _pos << " " ;
 
 
 }
@@ -64,8 +63,7 @@ void OneTime::decryptChar(char cipherchar) {
 	if(isupper(_key[_pos])){
 		pos = _key[_pos] - 65;
 	}
-
-	pos = _key[_pos] - 97;
+	else {pos = _key[_pos] - 97;}
 
 
 	char a = cipherchar - 'a';
