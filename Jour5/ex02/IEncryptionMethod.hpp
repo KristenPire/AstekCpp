@@ -1,5 +1,5 @@
-#ifndef _IENCRYPTIONMETHODE_H__
-# define _IENCRYPTIONMETHODE_H__
+#ifndef _IENCRYPTIONMETHODE_HPP__
+# define _IENCRYPTIONMETHODE_HPP__
 
 class IEncryptionMethod
 {
