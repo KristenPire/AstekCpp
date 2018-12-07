@@ -12,6 +12,11 @@ class Hunter : protected Warrior{
 		Hunter(const std::string &name ,int level);
 		virtual ~Hunter() = default;
 		
+		using Warrior::getName;
+		using Warrior::getLvl;
+		using Warrior::getPv;
+		using Warrior::getPower;
+		
 		using Warrior::CloseAttack;
 		virtual int RangeAttack();
 		using Warrior::Heal;
