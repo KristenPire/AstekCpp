@@ -1,7 +1,7 @@
 #include "Warrior.hh"
 
-Warrior::Warrior(const std::string& name, int level, const std::string& weapon) : Character(name, level){
-	_class = "Warrior";
+Warrior::Warrior(const std::string& name, int level, const std::string& weapon, const std::string& classe) : Character(name, level){
+	_class = classe;
 	_race = "Dwarf";
 	_hp = 100;
 	_strength = 12;
@@ -12,7 +12,8 @@ Warrior::Warrior(const std::string& name, int level, const std::string& weapon) 
 	_range = CLOSE;
 	_weapon = weapon;
 
-	std::cout << "I'm " << _name << " KKKKKKKKKKRRRRRRRRRRRRRREEEEEEEEOOOOOOORRRRGGGGGGG" << std::endl;
+	if(_class == "Warrior")
+		std::cout << "I'm " << _name << " KKKKKKKKKKRRRRRRRRRRRRRREEEEEEEEOOOOOOORRRRGGGGGGG" << std::endl;
 }
 
 Warrior::~Warrior(){}

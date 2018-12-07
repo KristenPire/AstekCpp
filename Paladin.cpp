@@ -1,6 +1,6 @@
 #include "Paladin.hh"
 
-Paladin::Paladin(const std::string& name, int level, const std::string& weapon) : Character(name, level),Warrior(name, level, weapon), Priest(name, level){
+Paladin::Paladin(const std::string& name, int level, const std::string& weapon) : Character(name, level),Warrior(name, level, weapon,"Paladin"), Priest(name, level){
 	_class = "Paladin";
 	_race = "Human";
 	_hp = 100;

@@ -5,7 +5,7 @@
 
 class Warrior : virtual public Character{
 	public:
-		Warrior(const std::string& name = "Thor", int level = 42, const std::string& weapon = "Harmer");
+		Warrior(const std::string& name = "Thor", int level = 42, const std::string& weapon = "Harmer", const std::string& classe = "Warrior");
 		virtual ~Warrior();
 
 		int CloseAttack();

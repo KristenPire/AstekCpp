@@ -12,7 +12,8 @@ SRC	=	main.cpp \
 		Warrior.cpp \
 		Mage.cpp \
 		Priest.cpp \
-		Paladin.cpp
+		Paladin.cpp \
+		Hunter.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 
