@@ -27,7 +27,6 @@ static void decryptString(IEncryptionMethod& encryptionMethod, std::string const
 
 int main(){
 	Cesar c;
-	
 	encryptString(c, "Je clair Luc, ne pas ? Ze voudrai un kekos !");
 	decryptString(c, "Mi isirb Xhq, ew jvo ? Zf zszjyir fz ytafk !");
 	encryptString(c, "KIKOO");

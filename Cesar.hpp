@@ -1,4 +1,5 @@
 #include "IEncryptionMethod.hpp"
+#include <iostream>
 
 #ifndef CESAR
 #define CESAR
@@ -6,6 +7,7 @@
 class Cesar : public IEncryptionMethod{
 	private:
 		Cesar(const Cesar &) = delete;
+		int _shift = 3;
 	
 	public:
 		Cesar() = default;
