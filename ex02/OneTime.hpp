@@ -13,8 +13,8 @@ public:
 	void reset();
 
 private:
-	const std::string key;
-
+	const std::string _key;
+	int stringPos;
 };
 
 
