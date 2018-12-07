@@ -5,90 +5,107 @@
 #include <iostream>
 #include <iomanip>
 
+//shows all elemnts in a container seperationg them by a ,
 template<typename T>
 void vPrint(T const& container, void (*showFuncPtr)(int))
 {
         std::cout << "Dump (" << std::setw(2) << container.size() << ')' << ' ';
-        std::XXXXXXXXXX(container.begin(), container.end(), showFuncPtr);
+        std::for_each(container.begin(), container.end(), showFuncPtr);
         std::cout << std::endl;
 }
 
+// function that counts the number of occurences of a value in a container
 template<typename T>
 size_t vHowMany(T const& container, int value)
 {
-        return std::XXXXXXXXXX(container.begin(), container.end(), value);
+        return std::count(container.begin(), container.end(), value);
 }
 
+
+// checks if they have the same values
 template<typename T>
 bool vIsSimilar(T const& container, int* values)
 {
-        return std::XXXXXXXXXX(container.begin(), container.end(), values);
+        return std::equal(container.begin(), container.end(), values);
 }
 
+// assign new value to elements in container from positon itform to itTo-1
 template<typename T>
 void vAssign(T itFrom, T itTo, int value)
 {
-          std::XXXXXXXXXX(itFrom, itTo, value);
+          std::fill(itFrom, itTo, value);
 }
 
+// replaces olv value by new value in container
 template<typename T>
 void vFindAndModify(T& container, int oldValue, int newValue)
 {
-          std::XXXXXXXXXX(container.begin(), container.end(), oldValue, newValue);
+          std::replace(container.begin(), container.end(), oldValue, newValue);
 }
 
+// removes values v in coontainer
 template<typename T>
 typename T::iterator vFindAndKill(T& container, int value)
 {
-          return std::XXXXXXXXXX(container.begin(), container.end(), value);
+          return std::remove(container.begin(), container.end(), value);
 }
 
+// shifts elements so that the element in nb shift is the first
 template<typename T>
 void vShift(T& container, int nbShift)
 {
-        std::XXXXXXXXXX(container.begin(), container.begin() + nbShift, container.end());
+        std::rotate(container.begin(), container.begin() + nbShift, container.end());
 }
 
+//
 template<typename T, typename U>
 void vApply(T itFrom, T itTo, U funcPtr)
 {
-        std::XXXXXXXXXX(itFrom, itTo, funcPtr);
+        std::for_each(itFrom, itTo, funcPtr);
 }
 
+// reverses the order of elements in container
 template<typename T>
 void vFlip(T& container)
 {
-        std::XXXXXXXXXX(container.begin(), container.end());
+        std::reverse(container.begin(), container.end());
 }
 
+// puts elements in increasing order
 template<typename T>
 void vToAscOrder(T& container)
 {
-        std::XXXXXXXXXX(container.begin(), container.end());
+        std::sort(container.begin(), container.end());
 }
 
+// puts elements in order depending fonction
 template<typename T>
 void vToSpecificOrder(T& container, bool (*cmpFuncPtr)(int, int))
 {
-        std::XXXXXXXXXX(container.begin(), container.end(), cmpFuncPtr);
+        std::sort(container.begin(), container.end(), cmpFuncPtr);
 }
 
+
+// gives the first iterator of value
 template<typename T>
 typename T::iterator vGiveMeTheFirst(T& container, int value)
 {
-        return std::XXXXXXXXXX(container.begin(), container.end(), value);
+        return std::find(container.begin(), container.end(), value);
 }
 
+// removes all following duplicate elements in container
 template<typename T>
 typename T::iterator vRemoveDuplicate(T& container)
 {
-        return std::XXXXXXXXXX(container.begin(), container.end());
+        return std::unique(container.begin(), container.end());
 }
 
+
+// fusions 3 containers so that elements are in ascending order in one conatiner
 template<typename T>
 void vFusionOrderedLists(T const & container1, T const & container2, T& containerToFill)
 {
-        std::XXXXXXXXXX(container1.begin(), container1.end(), container2.begin(), container2.end(), containerToFill.begin());
+        std::merge(container1.begin(), container1.end(), container2.begin(), container2.end(), containerToFill.begin());
 }
 
 #endif
