@@ -31,64 +31,64 @@ void vAssign(T itFrom, T itTo, int value)
           std::fill(itFrom, itTo, value);
 }
 
-//~ template<typename T>
-//~ void vFindAndModify(T& container, int oldValue, int newValue)
-//~ {
-          //~ std::XXXXXXXXXX(container.begin(), container.end(), oldValue, newValue);
-//~ }
+template<typename T>
+void vFindAndModify(T& container, int oldValue, int newValue)
+{
+          std::replace(container.begin(), container.end(), oldValue, newValue);
+}
 
-//~ template<typename T>
-//~ typename T::iterator vFindAndKill(T& container, int value)
-//~ {
-          //~ return std::XXXXXXXXXX(container.begin(), container.end(), value);
-//~ }
+template<typename T>
+typename T::iterator vFindAndKill(T& container, int value)
+{
+          return std::remove(container.begin(), container.end(), value);
+}
 
-//~ template<typename T>
-//~ void vShift(T& container, int nbShift)
-//~ {
-        //~ std::XXXXXXXXXX(container.begin(), container.begin() + nbShift, container.end());
-//~ }
+template<typename T>
+void vShift(T& container, int nbShift)
+{
+        std::rotate(container.begin(), container.begin() + nbShift, container.end());
+}
 
-//~ template<typename T, typename U>
-//~ void vApply(T itFrom, T itTo, U funcPtr)
-//~ {
-        //~ std::XXXXXXXXXX(itFrom, itTo, funcPtr);
-//~ }
+template<typename T, typename U>
+void vApply(T itFrom, T itTo, U funcPtr)
+{
+        std::for_each(itFrom, itTo, funcPtr);
+}
 
-//~ template<typename T>
-//~ void vFlip(T& container)
-//~ {
-        //~ std::XXXXXXXXXX(container.begin(), container.end());
-//~ }
+template<typename T>
+void vFlip(T& container)
+{
+        std::reverse(container.begin(), container.end());
+}
 
-//~ template<typename T>
-//~ void vToAscOrder(T& container)
-//~ {
-        //~ std::XXXXXXXXXX(container.begin(), container.end());
-//~ }
+template<typename T>
+void vToAscOrder(T& container)
+{
+        std::sort(container.begin(), container.end());
+}
 
-//~ template<typename T>
-//~ void vToSpecificOrder(T& container, bool (*cmpFuncPtr)(int, int))
-//~ {
-        //~ std::XXXXXXXXXX(container.begin(), container.end(), cmpFuncPtr);
-//~ }
+template<typename T>
+void vToSpecificOrder(T& container, bool (*cmpFuncPtr)(int, int))
+{
+        std::sort(container.begin(), container.end(), cmpFuncPtr);
+}
 
-//~ template<typename T>
-//~ typename T::iterator vGiveMeTheFirst(T& container, int value)
-//~ {
-        //~ return std::XXXXXXXXXX(container.begin(), container.end(), value);
-//~ }
+template<typename T>
+typename T::iterator vGiveMeTheFirst(T& container, int value)
+{
+        return std::find(container.begin(), container.end(), value);
+}
 
-//~ template<typename T>
-//~ typename T::iterator vRemoveDuplicate(T& container)
-//~ {
-        //~ return std::XXXXXXXXXX(container.begin(), container.end());
-//~ }
+template<typename T>
+typename T::iterator vRemoveDuplicate(T& container)
+{
+        return std::unique(container.begin(), container.end());
+}
 
-//~ template<typename T>
-//~ void vFusionOrderedLists(T const & container1, T const & container2, T& containerToFill)
-//~ {
-        //~ std::XXXXXXXXXX(container1.begin(), container1.end(), container2.begin(), container2.end(), containerToFill.begin());
-//~ }
+template<typename T>
+void vFusionOrderedLists(T const & container1, T const & container2, T& containerToFill)
+{
+        std::merge(container1.begin(), container1.end(), container2.begin(), container2.end(), containerToFill.begin());
+}
 
 #endif
