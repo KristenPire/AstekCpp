@@ -73,8 +73,7 @@ void Cesar::decryptChar(char cipherchar) {
 		std::cout << char(cipherchar);
 	}
 
-	_compteur+=1;
-	_compteur %= 26;
+	_compteur = (_compteur+1)%26;
 
 	return;
 

@@ -1,8 +1,9 @@
 #include "Cesar.hpp"
+#include "OneTime.hpp"
 #include <string>
 #include <iostream>
 
-static void encryptString(IEncryptionMethod& encryptionMethod,std::string const& toEncrypt){
+static void encryptString(IEncryptionMethod& encryptionMethod,const std::string & toEncrypt){
 
 	size_t len = toEncrypt.size();
 
@@ -15,7 +16,7 @@ static void encryptString(IEncryptionMethod& encryptionMethod,std::string const&
 	std::cout << std::endl;
 }
 
-static void decryptString(IEncryptionMethod& encryptionMethod, std::string const& toDecrypt)
+static void decryptString(IEncryptionMethod& encryptionMethod, const std::string & toDecrypt)
 {
 
 	size_t len = toDecrypt.size();
@@ -33,6 +34,8 @@ static void decryptString(IEncryptionMethod& encryptionMethod, std::string const
 
 int main(){
 	Cesar c;
+	OneTime o("DedeATraversLesBrumes");
+	OneTime t("TheCakeIsALie");
 
 	
 	encryptString(c,"Je clair Luc, ne pas ? Ze woudrai un kekos !");
@@ -41,6 +44,13 @@ int main(){
 	encryptString(c,"LULZ XD");
 	decryptString(c,"Ziqivun ea Ndcsg.Wji !");
 
+	encryptString(t,"Prend garde Lion, ne te trompes pas de voie !");
+	encryptString(o,"De la musique et du bruit!");
+	encryptString(t,"Kion li faras? Li studas kaj programas!");
+
+	decryptString(t,"Iyipd kijdp Pbvr, xi le bvhttgs tik om ovmg !");
+	decryptString(t,"Gi pa dunmhmp wu xg tuylx !");
+	decryptString(t,"Dpsp vm xaciw? Pk cxcvad otq rrykzsmla!");
 
 	return 0;
 }

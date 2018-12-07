@@ -8,6 +8,7 @@ CFLAGS	+= -std=c++17 -W -Wall -Wextra -Wfatal-errors
 CXXFLAGS += -std=c++17
 
 SRC	=	Cesar.cpp \
+		OneTime.cpp \
 		main.cpp 
 		
 
