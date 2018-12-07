@@ -8,7 +8,7 @@
 
 class Cesar : public IEncryptionMethod{
 public:
-	Cesar()=default;
+	Cesar();
 	virtual ~Cesar()=default;
 	void encryptChar (char plainchar);
 	void decryptChar(char cipherchar);
@@ -16,7 +16,8 @@ public:
 
 
 private: 
-
+	int numberCallsEncrypt;
+	int numberCallsDecrypt;
 };
 
 
